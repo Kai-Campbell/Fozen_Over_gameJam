@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cx16bqogiahox"
+path="res://.godot/imported/Main World.1.map-59df926e0dfaf3798474bb29e770c9c1.tres"
+
+[deps]
+
+source_file="res://Assets/Map/autosave/Main World.1.map"
+dest_files=["res://.godot/imported/Main World.1.map-59df926e0dfaf3798474bb29e770c9c1.tres"]
+
+[params]
+

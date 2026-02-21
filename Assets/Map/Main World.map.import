@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cf4t0amyvo560"
+path="res://.godot/imported/Main World.map-e67d8317575407a49a585812dcac9d09.tres"
+
+[deps]
+
+source_file="res://Assets/Map/Main World.map"
+dest_files=["res://.godot/imported/Main World.map-e67d8317575407a49a585812dcac9d09.tres"]
+
+[params]
+
