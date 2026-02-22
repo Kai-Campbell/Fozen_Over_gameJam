@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t5s3b0fxn0tg"
-path.s3tc="res://.godot/imported/Elements_08-256x256.png-3aaf7c167ba2217805a68db1600e4a2b.s3tc.ctex"
+uid="uid://6441duoesxhu"
+path.s3tc="res://.godot/imported/Army.png-a45e2fa1c72c3bda1056d618627ea3f5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Tiny Textures 2/256x256/Elements/Elements_08-256x256.png"
-dest_files=["res://.godot/imported/Elements_08-256x256.png-3aaf7c167ba2217805a68db1600e4a2b.s3tc.ctex"]
+source_file="res://Assets/Sprites/Army.png"
+dest_files=["res://.godot/imported/Army.png-a45e2fa1c72c3bda1056d618627ea3f5.s3tc.ctex"]
 
 [params]
 
