@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4f8r6mgjlclt"]
 
 [ext_resource type="Script" uid="uid://fgqcn4glh4n7" path="res://Scripts/character_body_3d.gd" id="1_q1h8k"]
-[ext_resource type="Texture2D" uid="uid://crrb7d611xrml" path="res://icon.svg" id="2_r1hl7"]
+[ext_resource type="Texture2D" uid="uid://devw5h53i77sj" path="res://Assets/Sprites/guy.png" id="2_2sd6s"]
 [ext_resource type="Script" uid="uid://dwx4xq6g58fxs" path="res://Scripts/PlayerRayCast.gd" id="3_2sd6s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
@@ -16,7 +16,9 @@ script = ExtResource("1_q1h8k")
 shape = SubResource("CapsuleShape3D_htteu")
 
 [node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=883234315]
-texture = ExtResource("2_r1hl7")
+transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("2_2sd6s")
 
 [node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=482060281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62131196, 0)

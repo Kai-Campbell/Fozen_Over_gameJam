@@ -203,7 +203,9 @@ points = PackedVector3Array(-1.4243524, 0.08456929, -1.0625, -1.4196529, 0.08185
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qnoj7"]
 
-[node name="Finale Wordl" type="Node3D" unique_id=567585183]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxaqe"]
+
+[node name="Finale World" type="Node3D" unique_id=567585183]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=722654458]
 environment = SubResource("Environment_eysrn")
@@ -302,3 +304,12 @@ debug_color = Color(0.9777946, 0, 0.4050228, 0.41960785)
 
 [node name="MainGuy" parent="." unique_id=1261746303 instance=ExtResource("12_vxaqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.186161, -0.6616764, 30.73265)
+
+[node name="Bomb" type="StaticBody3D" parent="." unique_id=510123588]
+transform = Transform3D(3.905, 0, 0, 0, 3.905, 0, 0, 0, 3.905, 35.011623, -1.1897861, -1.6447077)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bomb" unique_id=82311983]
+shape = SubResource("BoxShape3D_vxaqe")
+debug_color = Color(0.957174, 1.4439225e-06, 0.53659636, 0.41960785)

@@ -1621,7 +1621,7 @@ shape = SubResource("ConvexPolygonShape3D_0uma1")
 environment = SubResource("Environment_e0ngr")
 
 [node name="MainGuy" parent="." unique_id=1261746303 instance=ExtResource("13_c5t2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.588882, 5.4371085, -28.34284)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.339924, 5.4371085, 107.95866)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=334595165]
 transform = Transform3D(1, 0, 0, 0, 0.18223552, 0.9832549, 0, -0.9832549, 0.18223552, 0, 102.057495, -67.91105)
@@ -1726,7 +1726,7 @@ spot_range = 17.941708
 
 [node name="Items" type="Node3D" parent="." unique_id=2062713626]
 
-[node name="MindReader" type="Sprite3D" parent="Items" unique_id=2125845179]
+[node name="MindReader" type="Sprite3D" parent="Items" unique_id=2125845179 groups=["Interactable"]]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 172.99277, 4.432851, 113.46496)
 layers = 2
 billboard = 1
