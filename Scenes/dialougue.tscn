@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cbqfr3ksdmm8r"]
+
+[ext_resource type="Script" uid="uid://bmp3gdqr4gcj3" path="res://Scripts/dialougue.gd" id="1_f74bl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivtyn"]
+font_size = 40
+
+[node name="Dialougue" type="CanvasLayer" unique_id=1025600461]
+process_mode = 3
+script = ExtResource("1_f74bl")
+
+[node name="Dialougue Box" type="Control" parent="." unique_id=2066339873]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Dialougue Box" unique_id=386864247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3529412)
+
+[node name="DialogueText" type="Label" parent="Dialougue Box" unique_id=626658693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello"
+label_settings = SubResource("LabelSettings_ivtyn")
+autowrap_mode = 3

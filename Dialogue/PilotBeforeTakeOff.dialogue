@@ -1,0 +1,12 @@
+~ start
+if Global.has_flight_stick == false:
+	Pilot: I can't take you anywhere without the flight stick yet!
+elif Global.has_light == false:
+	Pilot: We won't be able to see without the light.
+elif Global.has_prop == false:
+	Pilot: The plane won't fly unless we have the propeller.
+else:
+	Pilot: Alright, we've got everything.
+	Pilot: You ready to go?
+
+=> END

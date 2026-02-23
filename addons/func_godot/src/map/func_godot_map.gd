@@ -150,3 +150,7 @@ func build() -> void:
 		print("")
 		FuncGodotUtil.print_profile_info("Build complete", _SIGNATURE)
 	build_complete.emit()
+
+
+func _on_static_body_3d_interacted(body: Variant) -> void:
+	pass # Replace with function body.

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bsqlg8dyqby7k"
+path="res://.godot/imported/ArmyMan.dialogue-06091b8cf4e3862e71b6dc3440923922.tres"
+
+[deps]
+
+source_file="res://Dialogue/ArmyMan.dialogue"
+dest_files=["res://.godot/imported/ArmyMan.dialogue-06091b8cf4e3862e71b6dc3440923922.tres"]
+
+[params]
+
+defaults=true

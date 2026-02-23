@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dru6nm4d5vrbt"
+path="res://.godot/imported/PilotBeforeTakeOff.dialogue-c52c5a146e324b74782d48ea0e1d2320.tres"
+
+[deps]
+
+source_file="res://Dialogue/PilotBeforeTakeOff.dialogue"
+dest_files=["res://.godot/imported/PilotBeforeTakeOff.dialogue-c52c5a146e324b74782d48ea0e1d2320.tres"]
+
+[params]
+
+defaults=true

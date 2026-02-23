@@ -6,6 +6,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2sd6s"]
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+
 [node name="MainGuy" type="Node3D" unique_id=1261746303]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1469314718]
@@ -30,3 +36,28 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.37195754)
 transform = Transform3D(1.9, 0, 0, 0, -8.305164e-08, -1.9, 0, 1.9, -8.305164e-08, 0, 0, -0.42578298)
 collision_mask = 2
 script = ExtResource("3_2sd6s")
+
+[node name="UI" type="Control" parent="CharacterBody3D" unique_id=1726949704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prompt" type="Label" parent="CharacterBody3D/UI" unique_id=79182764]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -174.0
+offset_right = 133.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_2sd6s")
+horizontal_alignment = 1
+autowrap_mode = 3

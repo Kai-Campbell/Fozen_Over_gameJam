@@ -1,0 +1,18 @@
+~ start
+if Global.has_meet_army:
+	%5 Army Guy: GET MOVING BOY I'M BUSY!
+	% Army Guy: The more you bother me, the less I get sad that you're probably gonna die.
+else:
+	Army Guy: It's a real brave thing you're doing here boy.
+	Army Guy: I gotta say, I'll be missing you a little bit...
+	Army Guy: Now listen, I'll tell you what you'll need to get to the North pole. The pilot told me to relay this to you.
+	Army Guy: You're gonna need a propeller, a flight stick, and a light to see through this thick snow storm.
+	Army Guy: I saw a light at the fire pit in the middle here, not sure if it works but it might be worth a try. What options do you have really?
+	Army Guy: I think we have a spare flight stick in the abandonded storage building across from here.
+	Army Guy: and the propeller....
+	Army Guy: I don't really have an idea of where that might be, but you can try asking around the camp to see if anyone has one.
+	Army Guy: And stay away from that weird thing in the corner by the igloo. I get weird feelings around that thing...
+	Army Guy: Now good luck boy. You're a real American Hero.
+	Army Guy: Or whats left of it...
+	set Global.has_meet_army = true
+=> END

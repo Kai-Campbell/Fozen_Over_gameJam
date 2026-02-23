@@ -1,0 +1,13 @@
+~ start
+Mayor: I understand this idea is insane but what choice do we have?!
+Mayor: You! right infront of me. Will you help us?
+- Yes
+	Mayor: Great!
+- No
+	Mayor: Too bad!
+	Mayor: You either help us or We throw you in the frozen lake.
+
+Mayor: Go speak to the army man around the side of here.
+Mayor: He'll tell you what you'll need to get.
+
+=> END

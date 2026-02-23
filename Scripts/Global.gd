@@ -1,6 +1,8 @@
 extends Node
 
-var has_tool_1 = false
-var has_tool_2 = false
-var has_tool_3 = false
+var has_flight_stick = false
+var has_light = false
+var has_prop = false
 var has_alien_device = false
+
+var has_meet_army = false

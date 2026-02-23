@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bpfvm3djvtycj" path="res://Assets/textures/Tiny Textures 2/256x256/Metal/Metal_06-256x256.png" id="9_fn60o"]
 [ext_resource type="Texture2D" uid="uid://br0ydh3icov30" path="res://Assets/textures/Tiny Textures 2/256x256/Brick/Brick_13-256x256.png" id="10_27lat"]
 [ext_resource type="Texture2D" uid="uid://wi8nppmhv5m4" path="res://Assets/Sprites/Pilot.png" id="11_h6g0p"]
+[ext_resource type="Script" uid="uid://b5alnyigx72gv" path="res://Scripts/Interactable.gd" id="12_uecdt"]
 [ext_resource type="PackedScene" uid="uid://d4f8r6mgjlclt" path="res://Scenes/main_guy.tscn" id="12_vxaqe"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
@@ -296,6 +297,8 @@ texture = ExtResource("11_h6g0p")
 transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, 0, 0, -6.484985e-05)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("12_uecdt")
+prompt_text = "Talk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pilot/StaticBody3D" unique_id=637275229]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -309,6 +312,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.186161, -0.6616764, 30.73
 transform = Transform3D(3.905, 0, 0, 0, 3.905, 0, 0, 0, 3.905, 35.011623, -1.1897861, -1.6447077)
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("12_uecdt")
+prompt_text = "Do It"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bomb" unique_id=82311983]
 shape = SubResource("BoxShape3D_vxaqe")
