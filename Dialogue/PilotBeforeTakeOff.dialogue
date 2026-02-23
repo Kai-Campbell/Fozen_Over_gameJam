@@ -8,5 +8,8 @@ elif Global.has_prop == false:
 else:
 	Pilot: Alright, we've got everything.
 	Pilot: You ready to go?
-
+- Yeah, lets do it
+	Pilot: Alright off we go!
+- No I've got something I have to do
+	Pilot: Alright, just come back whenever you're ready.
 => END

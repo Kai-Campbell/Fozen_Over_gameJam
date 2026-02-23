@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://fgqcn4glh4n7" path="res://Scripts/character_body_3d.gd" id="1_q1h8k"]
 [ext_resource type="Texture2D" uid="uid://devw5h53i77sj" path="res://Assets/Sprites/guy.png" id="2_2sd6s"]
 [ext_resource type="Script" uid="uid://dwx4xq6g58fxs" path="res://Scripts/PlayerRayCast.gd" id="3_2sd6s"]
+[ext_resource type="Texture2D" uid="uid://bfxob7issqsod" path="res://Assets/Sprites/Crosshair.png" id="4_xwj3n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
 
@@ -32,7 +33,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62131196, 0)
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=895532561]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.37195754)
 
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head" unique_id=2071871458]
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head" unique_id=2071871458 groups=["Player"]]
 transform = Transform3D(1.9, 0, 0, 0, -8.305164e-08, -1.9, 0, 1.9, -8.305164e-08, 0, 0, -0.42578298)
 collision_mask = 2
 script = ExtResource("3_2sd6s")
@@ -61,3 +62,19 @@ grow_vertical = 0
 label_settings = SubResource("LabelSettings_2sd6s")
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="CharacterBody3D/UI" unique_id=1474951552]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_xwj3n")
+stretch_mode = 3

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cirurpsts77k"
+path="res://.godot/imported/LittleShiet.dialogue-67306d9519c85fb67363010aef75f98c.tres"
+
+[deps]
+
+source_file="res://Dialogue/LittleShiet.dialogue"
+dest_files=["res://.godot/imported/LittleShiet.dialogue-67306d9519c85fb67363010aef75f98c.tres"]
+
+[params]
+
+defaults=true

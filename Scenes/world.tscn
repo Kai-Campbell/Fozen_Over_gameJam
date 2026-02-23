@@ -42,12 +42,14 @@
 [ext_resource type="Texture2D" uid="uid://wipqegohvljd" path="res://Assets/Sprites/SpinyHatKid.png" id="39_04jkj"]
 [ext_resource type="Script" uid="uid://b5alnyigx72gv" path="res://Scripts/Interactable.gd" id="40_al5m0"]
 [ext_resource type="Texture2D" uid="uid://6441duoesxhu" path="res://Assets/Sprites/Army.png" id="40_lkcvt"]
+[ext_resource type="Resource" uid="uid://cirurpsts77k" path="res://Dialogue/LittleShiet.dialogue" id="42_b4e6k"]
 [ext_resource type="Texture2D" uid="uid://devw5h53i77sj" path="res://Assets/Sprites/guy.png" id="42_w5giw"]
 [ext_resource type="Texture2D" uid="uid://wi8nppmhv5m4" path="res://Assets/Sprites/Pilot.png" id="43_jwdyn"]
 [ext_resource type="Resource" uid="uid://bsqlg8dyqby7k" path="res://Dialogue/ArmyMan.dialogue" id="43_te07t"]
 [ext_resource type="Resource" uid="uid://bnk51iu144488" path="res://Dialogue/Mayor.dialogue" id="44_6mm6r"]
 [ext_resource type="Texture2D" uid="uid://dehfv1kgwvdm7" path="res://Assets/Sprites/Fire.png" id="44_t6yt7"]
 [ext_resource type="Resource" uid="uid://dru6nm4d5vrbt" path="res://Dialogue/PilotBeforeTakeOff.dialogue" id="46_xcb5n"]
+[ext_resource type="Resource" uid="uid://c6h7u07ffqvbi" path="res://Dialogue/RandomNPCS.dialogue" id="49_0sgyr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5giw"]
 albedo_texture = ExtResource("34_atqvy")
@@ -1051,6 +1053,8 @@ animations = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_al5m0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l33cg"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mm6r"]
 atlas = ExtResource("44_t6yt7")
 region = Rect2(0, 0, 32, 32)
@@ -1734,7 +1738,7 @@ spot_range = 17.941708
 
 [node name="Items" type="Node3D" parent="." unique_id=2062713626]
 
-[node name="MindReader" type="Sprite3D" parent="Items" unique_id=2125845179]
+[node name="MindReader" type="Sprite3D" parent="Items" unique_id=2125845179 groups=["Alien Device"]]
 unique_name_in_owner = true
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 172.99277, 4.432851, 113.46496)
 layers = 2
@@ -1742,7 +1746,7 @@ billboard = 1
 texture_filter = 0
 texture = ExtResource("36_ochwf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Items/MindReader" unique_id=1358873517 groups=["Interactable"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="Items/MindReader" unique_id=1358873517 groups=["Alien Device", "Interactable"]]
 transform = Transform3D(0.365, 0, 0, 0, 0.365, 0, 0, 0, 0.365, 0, 0, 0)
 collision_layer = 2
 collision_mask = 2
@@ -1752,7 +1756,7 @@ script = ExtResource("40_al5m0")
 shape = SubResource("BoxShape3D_xcb5n")
 debug_color = Color(0.9467377, 7.412136e-06, 0.5887067, 0.41960785)
 
-[node name="Stick" type="Sprite3D" parent="Items" unique_id=539477190]
+[node name="Stick" type="Sprite3D" parent="Items" unique_id=539477190 groups=["Flight Stick"]]
 unique_name_in_owner = true
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -118.68967, 5.4050684, -58.778053)
 layers = 2
@@ -1760,7 +1764,7 @@ billboard = 1
 texture_filter = 0
 texture = ExtResource("37_r74th")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Items/Stick" unique_id=1753409089 groups=["Interactable"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="Items/Stick" unique_id=1753409089 groups=["Flight Stick", "Interactable"]]
 transform = Transform3D(0.29499996, 0, 0, 0, 0.29499996, 0, 0, 0, 0.29499996, -0.060408592, 0, 0)
 collision_layer = 2
 collision_mask = 2
@@ -1778,7 +1782,7 @@ billboard = 1
 texture_filter = 0
 texture = ExtResource("38_04jkj")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Items/Light" unique_id=1875501098 groups=["Interactable"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="Items/Light" unique_id=1875501098 groups=["Interactable", "Light"]]
 transform = Transform3D(0.495, 0, 0, 0, 0.495, 0, 0, 0, 0.495, 0, 0, 0)
 collision_layer = 2
 collision_mask = 2
@@ -1797,12 +1801,13 @@ animation = &"Kid"
 autoplay = "Kid"
 frame_progress = 0.6220954
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Items/Kid" unique_id=1247154032]
+[node name="StaticBody3D" type="StaticBody3D" parent="Items/Kid" unique_id=1247154032 groups=["Talk"]]
 transform = Transform3D(0.385, 0, 0, 0, 0.385, 0, 0, 0, 0.385, 0, 0, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("40_al5m0")
 prompt_text = "Talk"
+dialogue = ExtResource("42_b4e6k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Items/Kid/StaticBody3D" unique_id=2029901187]
 shape = SubResource("BoxShape3D_te07t")
@@ -1870,6 +1875,18 @@ transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 131.29921, 5.120266, 13.69
 billboard = 2
 texture_filter = 0
 texture = ExtResource("42_w5giw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="People/Sprite3D" unique_id=1725523599 groups=["Talk"]]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("40_al5m0")
+prompt_text = "Talk"
+dialogue = ExtResource("49_0sgyr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="People/Sprite3D/StaticBody3D" unique_id=1443690092]
+shape = SubResource("BoxShape3D_l33cg")
+debug_color = Color(0.9532959, 0, 0.556777, 0.41960785)
 
 [node name="Sprite3D2" type="Sprite3D" parent="People" unique_id=1781386629]
 transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 127.952545, 5.002617, 21.453636)

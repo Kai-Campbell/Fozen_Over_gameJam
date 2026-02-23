@@ -15,4 +15,12 @@ func _physics_process(_delta: float) -> void:
 			if collider.is_in_group("Talk"):
 				collider.talk()
 			if collider.is_in_group("Interactable"):
-				collider.interact(owner)
+				if collider.is_in_group("Light"):
+					collider.get_parent().visible = false
+					Global.has_light = true
+				if collider.is_in_group("Flight Stick"):
+					collider.get_parent().visible = false
+					Global.has_flight_stick = true
+				if collider.is_in_group("Alien Device"):
+					collider.get_parent().visible = false
+					Global.has_alien_device = true

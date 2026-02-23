@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cyh4ahpt867ul"
+path="res://.godot/imported/PilotFinale.dialogue-5ea4a1c1da1719cbdc4c752c9fcdf04a.tres"
+
+[deps]
+
+source_file="res://Dialogue/PilotFinale.dialogue"
+dest_files=["res://.godot/imported/PilotFinale.dialogue-5ea4a1c1da1719cbdc4c752c9fcdf04a.tres"]
+
+[params]
+
+defaults=true

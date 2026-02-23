@@ -15,6 +15,7 @@ signal interacted(body)
 func interact(body):
 	interacted.emit(body)
 	print("interacted")
+	
 		
 func talk() -> void:
 	DialogueManager.show_dialogue_balloon(dialogue, dialogue_start)

@@ -1,0 +1,27 @@
+~ start
+Kid: Hey there!
+Kid: Boy I'm so cold! But atleast I have my hat!
+- Give me that hat.
+	Kid: No way! I like my hat!
+- Can I use your hat?
+	Kid: Nah, I don't feel like it.
+- That's cool, anyway I could borrow it?
+	Kid: Hmmm.... Naw!
+if Global.has_alien_device == true:
+	- Use Mind Control Device
+		Kid: Huh Wa...
+		Kid: What's going on?
+		Mind: [wave]*Like taking candy from a baby*[/wave]
+		Mind: [wave]*or I guess, taking a hat from a kid*[/wave]
+		Mind: [wave]*Whatever*[/wave]
+		set Global.has_prop = true
+	- Please 
+		Kid: No!
+	- Just give it to me
+		Kid: NO ITS MINE
+else:
+	- Please 
+		Kid: No!
+	- Just give it to me
+		Kid: NO ITS MINE
+=> END

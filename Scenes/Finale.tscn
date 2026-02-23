@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://wi8nppmhv5m4" path="res://Assets/Sprites/Pilot.png" id="11_h6g0p"]
 [ext_resource type="Script" uid="uid://b5alnyigx72gv" path="res://Scripts/Interactable.gd" id="12_uecdt"]
 [ext_resource type="PackedScene" uid="uid://d4f8r6mgjlclt" path="res://Scenes/main_guy.tscn" id="12_vxaqe"]
+[ext_resource type="Resource" uid="uid://cyh4ahpt867ul" path="res://Dialogue/PilotFinale.dialogue" id="13_4cmoy"]
+[ext_resource type="Resource" uid="uid://0sqk7a5eitmx" path="res://Dialogue/Finale Options.dialogue" id="15_fn60o"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
 interpolation_mode = 2
@@ -299,6 +301,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("12_uecdt")
 prompt_text = "Talk"
+dialogue = ExtResource("13_4cmoy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pilot/StaticBody3D" unique_id=637275229]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -314,6 +317,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("12_uecdt")
 prompt_text = "Do It"
+dialogue = ExtResource("15_fn60o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bomb" unique_id=82311983]
 shape = SubResource("BoxShape3D_vxaqe")
