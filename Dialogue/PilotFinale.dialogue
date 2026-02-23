@@ -1,11 +1,6 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Pilot: Welp, here we are.[wait=1]
+Pilot: Listen bud, I know you're probably scared, but what you're doing is really important
+Pilot: You're a real hero willing to sacrifice yourself for the benefit of mankind.
+Pilot: First thing I'm gonna do once this is all over is celebrate on the beach in your honor!
 => END

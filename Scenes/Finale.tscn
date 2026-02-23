@@ -295,7 +295,7 @@ billboard = 2
 texture_filter = 0
 texture = ExtResource("11_h6g0p")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="pilot" unique_id=444782178]
+[node name="StaticBody3D" type="StaticBody3D" parent="pilot" unique_id=444782178 groups=["Talk"]]
 transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, 0, 0, -6.484985e-05)
 collision_layer = 2
 collision_mask = 2
