@@ -1,9 +1,11 @@
 ~ start
 - Activate (10 seconds)
 	Mind: [wave]*I'm not going down alone*[/wave]
+	set Global.decision_made_10_sec = true
 - Activate (20 minutes)
 	Mind: [wave]*Welp, I guess this is it*[/wave]
 	Mind: [wave]*A hero... what a joke*[/wave]
+	set Global.decision_made_20_min = true
 
-set Global.decision_made = true
+
 => END

@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://dkn6pvpf03vhw"]
+
+[ext_resource type="Script" uid="uid://c5ymv40pshvyb" path="res://Scripts/20_minutes.gd" id="1_ed75o"]
+[ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="2_chgay"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8yoep"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_4s85j"]
+font_size = 80
+
+[node name="20 Minutes" type="CanvasLayer" unique_id=598201769]
+script = ExtResource("1_ed75o")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=381658098]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=593572235]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -568.5
+offset_top = 8.0
+offset_right = 568.5
+offset_bottom = 293.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "Despite your feelings towards being thrown into this situation, you decide its best to do
+whats best for the rest of the World. You set the timer for 20 minutes and watch as the plane
+slowly fades away into the snow storm. Despite all, you are suprisingly calm. As the nuke
+goes off you are eradicated instantly. The World's temperature increases dramatically within
+hours. The people that you left are ecstatic that the mission was a success. They build a shrine
+in your honor as the person that saved the world. The only person that despises the statue
+is the child that never got his hat back..."
+label_settings = SubResource("LabelSettings_8yoep")
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="." unique_id=1162284842]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -55.0
+offset_right = 154.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The End"
+label_settings = SubResource("LabelSettings_4s85j")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1566008898]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = -178.0
+offset_right = 254.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 199
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1965198884]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1036616175]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("2_chgay")]
+
+[node name="Timer" type="Timer" parent="." unique_id=371334466]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

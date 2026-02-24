@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://cyh4ahpt867ul" path="res://Dialogue/PilotFinale.dialogue" id="13_4cmoy"]
 [ext_resource type="Resource" uid="uid://0sqk7a5eitmx" path="res://Dialogue/Finale Options.dialogue" id="15_fn60o"]
 [ext_resource type="Resource" uid="uid://d2j0jiabwomjv" path="res://Dialogue/LeavePilot.dialogue" id="17_h6g0p"]
+[ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="18_ni086"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
 interpolation_mode = 2
@@ -339,3 +340,5 @@ dialogue = ExtResource("17_h6g0p")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane" unique_id=96815466]
 shape = SubResource("BoxShape3D_fn60o")
 debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)
+
+[node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("18_ni086")]

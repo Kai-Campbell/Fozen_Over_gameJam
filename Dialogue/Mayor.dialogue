@@ -16,5 +16,5 @@ if Global.has_met_mayor == false:
 	Mayor: God bless you young... [wait=1]whatever you are
 set Global.has_met_mayor = true
 else:
-	Mayor: Well get to it, we have the fate of the World in our hands!
+	Mayor: Now get to it, we have the fate of the World in our hands!
 => END

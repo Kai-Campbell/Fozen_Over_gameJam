@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Snow is Cold"
-run/main_scene="uid://cbyayl60jk6br"
+run/main_scene="uid://bqwg23muhrj5v"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

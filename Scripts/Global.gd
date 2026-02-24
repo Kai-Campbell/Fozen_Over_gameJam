@@ -12,7 +12,8 @@ var has_met_kid = false
 var has_met_mayor = false
 
 'events'
-var decision_made = false # if you blow the bomb up
+var decision_made_10_sec = false # if you blow the bomb up
+var decision_made_20_min = false
 var leave_pilot_to_die = false # if you leave the pilot
 var leave = false
 var kill_pilot = false

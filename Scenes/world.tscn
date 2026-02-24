@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://dehfv1kgwvdm7" path="res://Assets/Sprites/Fire.png" id="44_t6yt7"]
 [ext_resource type="Resource" uid="uid://dru6nm4d5vrbt" path="res://Dialogue/PilotBeforeTakeOff.dialogue" id="46_xcb5n"]
 [ext_resource type="Resource" uid="uid://c6h7u07ffqvbi" path="res://Dialogue/RandomNPCS.dialogue" id="49_0sgyr"]
+[ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="53_uqdn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwaj6"]
 albedo_texture = ExtResource("36_uqdn7")
@@ -1018,6 +1019,8 @@ adjustment_saturation = 1.1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_coyub"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_uqdn7"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcb5n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6mm6r"]
@@ -1726,6 +1729,30 @@ transform = Transform3D(-3.7729485e-06, 0, 0.403, 0, 11.928, 0, -86.315, 0, -1.7
 shape = SubResource("BoxShape3D_coyub")
 debug_color = Color(0.9675012, 3.85046e-07, 0.47687912, 0.41960785)
 
+[node name="StaticBody3D6" type="StaticBody3D" parent="World Geo" unique_id=19775089]
+transform = Transform3D(39.71, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -72.99405, 1.1631293, 87.79153)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Geo/StaticBody3D6" unique_id=1623564760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3629122, 0)
+shape = SubResource("BoxShape3D_uqdn7")
+debug_color = Color(0.95662576, 1.92523e-06, 0.5395147, 0.41960785)
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="World Geo" unique_id=716301472]
+transform = Transform3D(-9.212175e-07, 0.7071068, 0.7071067, 0, 0.7071067, -0.7071068, -21.075, -3.090862e-08, -3.0908616e-08, -54.581154, 1.1631293, 100.55771)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Geo/StaticBody3D7" unique_id=519058392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3629122, 0)
+shape = SubResource("BoxShape3D_uqdn7")
+debug_color = Color(0.95662576, 1.92523e-06, 0.5395147, 0.41960785)
+
+[node name="StaticBody3D8" type="StaticBody3D" parent="World Geo" unique_id=1417951009]
+transform = Transform3D(39.71, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 116.642914, 1.1631293, 84.76044)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Geo/StaticBody3D8" unique_id=1676454176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3629122, 0)
+shape = SubResource("BoxShape3D_uqdn7")
+debug_color = Color(0.95662576, 1.92523e-06, 0.5395147, 0.41960785)
+
 [node name="Lights" type="Node3D" parent="." unique_id=1918175557]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1846675145]
@@ -2297,5 +2324,7 @@ font_size = 107
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 21.89896, 12.640531, 30.415974)
 text = "Camp"
 font_size = 107
+
+[node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("53_uqdn7")]
 
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]

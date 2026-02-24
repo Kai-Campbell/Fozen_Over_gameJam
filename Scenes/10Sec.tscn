@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://h4p8lkonvckr"]
+
+[ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="1_ama7q"]
+[ext_resource type="Script" uid="uid://cs1iir3lwcw44" path="res://Scripts/10_sec.gd" id="1_kq7fs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kq7fs"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgui6"]
+font_size = 80
+
+[node name="10Sec" type="CanvasLayer" unique_id=1697364785]
+script = ExtResource("1_kq7fs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1369554211]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=125189920]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -568.5
+offset_top = 27.0
+offset_right = 568.5
+offset_bottom = 312.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "You decide that sacrificing yourself isn't fair. You decide to detonate the nuke quickly before
+you or the pilot have time to react. You are both eradicated before you can blink. The mission
+was a success and the World's temperature increases dramatically within hours. The people
+you left that sent you on this mission are greatful, yet worried when their pilot never returns,
+unknowing of his fate..."
+label_settings = SubResource("LabelSettings_kq7fs")
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="." unique_id=618252103]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -55.0
+offset_right = 154.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The End"
+label_settings = SubResource("LabelSettings_hgui6")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1024819236]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = -178.0
+offset_right = 254.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 199
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1807925704]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=426100833]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("1_ama7q")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1173211292]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

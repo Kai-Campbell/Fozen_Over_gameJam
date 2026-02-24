@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://bqwg23muhrj5v"]
 
+[ext_resource type="Script" uid="uid://c7rd2ubc2snks" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://ck55rkfh1d04l" path="res://Assets/Screenshot 2026-02-24 141845.png" id="2_48xlc"]
+[ext_resource type="FontFile" uid="uid://uk64bdgbqgeb" path="res://Assets/Fonts/Achtung Bravo.ttf" id="3_1ehe0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ce3w2"]
+font_size = 120
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
 [node name="Main Menu" type="Control" unique_id=591675093]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +19,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1952398078]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_48xlc")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1674102596]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4708554, 0.4708554, 0.4708554, 0.36862746)
+
+[node name="Button" type="Button" parent="." unique_id=443005239]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 394.0
+offset_right = 650.0
+offset_bottom = 511.0
+theme_override_constants/outline_size = 10
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 79
+text = "Play"
+
+[node name="Label" type="Label" parent="." unique_id=1824607168]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -582.0
+offset_top = 44.0
+offset_right = 530.0
+offset_bottom = 218.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1ehe0")
+text = "Forzen Over"
+label_settings = SubResource("LabelSettings_ce3w2")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -5,12 +5,13 @@ elif Global.has_light == false:
 	Pilot: We won't be able to see without the light.
 elif Global.has_prop == false:
 	Pilot: The plane won't fly unless we have the propeller.
-else:
+
+if Global.has_flight_stick == true && Global.has_light == true && Global.has_prop == true:
 	Pilot: Alright, we've got everything.
 	Pilot: You ready to go?
-- Yeah, lets do it
-	Pilot: Alright off we go!
-	set Global.leave = true
-- No I've got something I have to do
-	Pilot: Alright, just come back whenever you're ready.
+	- Yeah, lets do it
+		Pilot: Alright off we go!
+		set Global.leave = true
+	- No I've got something I have to do
+		Pilot: Alright, just come back whenever you're ready.
 => END

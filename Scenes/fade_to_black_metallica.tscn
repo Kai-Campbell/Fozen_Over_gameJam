@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://n2giyhtwedwu"]
+
+[ext_resource type="Script" uid="uid://brqed0xo15g44" path="res://Scripts/fade_to_black_metallica.gd" id="1_hjs38"]
+
+[node name="Fade To Black Metallica" type="CanvasLayer" unique_id=2014068824]
+script = ExtResource("1_hjs38")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2061924164]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
