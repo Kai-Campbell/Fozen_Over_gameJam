@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2j0jiabwomjv"
+path="res://.godot/imported/LeavePilot.dialogue-7304b4b75b105c73918295c9d7ebe370.tres"
+
+[deps]
+
+source_file="res://Dialogue/LeavePilot.dialogue"
+dest_files=["res://.godot/imported/LeavePilot.dialogue-7304b4b75b105c73918295c9d7ebe370.tres"]
+
+[params]
+
+defaults=true

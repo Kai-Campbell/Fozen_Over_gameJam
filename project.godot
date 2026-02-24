@@ -79,7 +79,7 @@ run={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/Mayor.dialogue", "res://Dialogue/PilotBeforeTakeOff.dialogue", "res://Dialogue/ArmyMan.dialogue", "res://Dialogue/LittleShiet.dialogue", "res://Dialogue/PilotFinale.dialogue", "res://Dialogue/Finale Options.dialogue", "res://Dialogue/RandomNPCS.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/Mayor.dialogue", "res://Dialogue/PilotBeforeTakeOff.dialogue", "res://Dialogue/ArmyMan.dialogue", "res://Dialogue/LittleShiet.dialogue", "res://Dialogue/PilotFinale.dialogue", "res://Dialogue/Finale Options.dialogue", "res://Dialogue/RandomNPCS.dialogue", "res://Dialogue/LeavePilot.dialogue")
 
 [layer_names]
 

@@ -3,4 +3,56 @@ Pilot: Welp, here we are.[wait=1]
 Pilot: Listen bud, I know you're probably scared, but what you're doing is really important
 Pilot: You're a real hero willing to sacrifice yourself for the benefit of mankind.
 Pilot: First thing I'm gonna do once this is all over is celebrate on the beach in your honor!
+- Can you please tell me why I'm here, no one actually explained why.
+	Pilot: Yeah [wait=1] you're the one whose gonna blow up the nuke.
+- Why exactly did you bring me out here?
+	Pilot: to blow up the nuke, duh.
+
+Pilot: no one told you?
+- WHAT!
+	Pilot: Woah chill out.
+- What nuke?
+	Pilot: the one over there behind me.
+
+Pilot: yeah that was the whole plan remember?
+Pilot: Go to the North pole, blow up the polar ice cap so the world cools down.
+Pilot: You know... cause the World is kinda frozen over?
+Pilot: Anyway... I'm gonna get going now, just go over there and activate it and we'll all be proud [wait=1]or whatever
+Pilot: Oh and please set a timer for 20 minutes, that'll give me enough time to get out of the blast raidus.
+
+if Global.has_alien_device:
+	- Use Mind Control Device
+		Pilot: Hugh what happend? [wait=1] My head hurts like crazy!
+		- You are going to blow up the nuke and set it for 20 minutes from now
+			Pilot: [wave]I will blow up the nuke in 20 minutes[/wave]
+			Pilot: [wave]Anything you say is my command.[/wave]
+			Mind: [wave]*Well that was easy*[/wave]
+			Mind: [wave]*Time to get out of here*[/wave]
+			set Global.kill_pilot = true
+			=> END!
+		- These are not the droids you are looking for
+			Pilot: [wave]These are not the droids we are looking for[/wave]
+			You: Also go blow up that nuke in 20 minutes.
+			Pilot: [wave]I will blow up the nuke in 20 minutes[/wave]
+			Mind: [wave]*Well that was easy*[/wave]
+			Mind: [wave]*Time to get out of here*[/wave]
+			set Global.kill_pilot = true
+			=> END!
+	- I'm scared! I'm not ready to die.
+		Pilot: Well, I can't take you back.
+		Pilot: Sorry bud, this is the way it's gotta be.
+	- Please take me back! I'm not doing this!
+		Pilot: Sorry bud, strict orders to not take you back
+		Pilot: Once you're here it's decided.
+else:
+	- I'm scared! I'm not ready to die.
+		Pilot: Well, I can't take you back.
+		Pilot: Sorry bud, this is the way it's gotta be.
+	- Please take me back! I'm not doing this!
+		Pilot: Sorry bud, strict orders to not take you back
+		Pilot: Once you're here it's decided.
+
+Pilot: Well [wait=1] it was nice knowing you kid
+Pilot: or adult or [wait=1] whatever you are.
+
 => END

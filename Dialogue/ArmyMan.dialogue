@@ -2,9 +2,16 @@
 if Global.has_meet_army:
 	%5 Army Guy: GET MOVING BOY I'M BUSY!
 	% Army Guy: The more you bother me, the less I get sad that you're probably gonna die.
+	% Army Guy: Get moving or give me 20!
 else:
 	Army Guy: It's a real brave thing you're doing here boy.
 	Army Guy: I gotta say, I'll be missing you a little bit...
+	- What exactly am I doing again?
+		Army Guy: You should've been paying attention at the meeting boy!
+	- Why are you going to miss me?
+		Army Guy: Ah I understand. These things can be hard to process.
+		Army Guy: Don't worry about me bud. I'll be okay.
+
 	Army Guy: Now listen, I'll tell you what you'll need to get to the North pole. The pilot told me to relay this to you.
 	Army Guy: You're gonna need a propeller, a flight stick, and a light to see through this thick snow storm.
 	Army Guy: I saw a light at the fire pit in the middle here, not sure if it works but it might be worth a try. What options do you have really?

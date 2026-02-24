@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://j5dgbplk2ddh"]
 
+[ext_resource type="Script" uid="uid://blhl32keinoi3" path="res://Scripts/finale.gd" id="1_27lat"]
 [ext_resource type="Shader" uid="uid://dgl4qh3b4rue5" path="res://Skyshader.tres" id="1_x0ure"]
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2_ao5v8"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="3_sxdeq"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d4f8r6mgjlclt" path="res://Scenes/main_guy.tscn" id="12_vxaqe"]
 [ext_resource type="Resource" uid="uid://cyh4ahpt867ul" path="res://Dialogue/PilotFinale.dialogue" id="13_4cmoy"]
 [ext_resource type="Resource" uid="uid://0sqk7a5eitmx" path="res://Dialogue/Finale Options.dialogue" id="15_fn60o"]
+[ext_resource type="Resource" uid="uid://d2j0jiabwomjv" path="res://Dialogue/LeavePilot.dialogue" id="17_h6g0p"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
 interpolation_mode = 2
@@ -208,7 +210,10 @@ points = PackedVector3Array(-1.4243524, 0.08456929, -1.0625, -1.4196529, 0.08185
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vxaqe"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fn60o"]
+
 [node name="Finale World" type="Node3D" unique_id=567585183]
+script = ExtResource("1_27lat")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=722654458]
 environment = SubResource("Environment_eysrn")
@@ -309,9 +314,9 @@ shape = SubResource("BoxShape3D_qnoj7")
 debug_color = Color(0.9777946, 0, 0.4050228, 0.41960785)
 
 [node name="MainGuy" parent="." unique_id=1261746303 instance=ExtResource("12_vxaqe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.186161, -0.6616764, 30.73265)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.186161, -1.4801314, 30.73265)
 
-[node name="Bomb" type="StaticBody3D" parent="." unique_id=510123588]
+[node name="Bomb" type="StaticBody3D" parent="." unique_id=510123588 groups=["Talk"]]
 transform = Transform3D(3.905, 0, 0, 0, 3.905, 0, 0, 0, 3.905, 35.011623, -1.1897861, -1.6447077)
 collision_layer = 2
 collision_mask = 2
@@ -322,3 +327,15 @@ dialogue = ExtResource("15_fn60o")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bomb" unique_id=82311983]
 shape = SubResource("BoxShape3D_vxaqe")
 debug_color = Color(0.957174, 1.4439225e-06, 0.53659636, 0.41960785)
+
+[node name="Plane" type="StaticBody3D" parent="." unique_id=146189644 groups=["Talk"]]
+transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 43.404327)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("12_uecdt")
+prompt_text = "Leave"
+dialogue = ExtResource("17_h6g0p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane" unique_id=96815466]
+shape = SubResource("BoxShape3D_fn60o")
+debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)

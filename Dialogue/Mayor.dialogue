@@ -1,14 +1,20 @@
 ~ start
-Mayor: I understand this idea is insane but what choice do we have?!
-Mayor: You! right infront of me. Will you help us?
-- Yes
-	Mayor: Great!
-- No
-	Mayor: Too bad!
-	Mayor: You either help us or We throw you in the frozen lake.
+if Global.has_met_mayor == false:
+	Mayor: I understand this idea is insane but what choice do we have?!
+	Mayor: We have to continue the mission that was set upon us by the United States
+	Mayor: Who knows if they're all waiting for us to finish what we set out upon?
+	Mayor: We must get the plane up and running and make our way to the North Pole to end this mess!
+	Mayor: You! right infront of me. Will you help us?
+	- Yes
+		Mayor: Great!
+	- No
+		Mayor: Too bad!
+		Mayor: You either help us or we throw you in the frozen lake.
 
-Mayor: Go speak to the army man around the side of here.
-Mayor: He'll tell you what you'll need to get.
-Mayor: God bless you young... [wait=1]whatever you are
-
+	Mayor: Go speak to the seargent at the station in the corner, left of here.
+	Mayor: He'll tell you what you'll need to get to fix the plane.
+	Mayor: God bless you young... [wait=1]whatever you are
+set Global.has_met_mayor = true
+else:
+	Mayor: Well get to it, we have the fate of the World in our hands!
 => END
