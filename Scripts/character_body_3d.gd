@@ -14,6 +14,7 @@ var current_speed = SPEED
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -43,9 +44,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
 	else:
+		$AudioStreamPlayer3D.play()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-	
 
 	move_and_slide()
+	

@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://dehfv1kgwvdm7" path="res://Assets/Sprites/Fire.png" id="44_t6yt7"]
 [ext_resource type="Resource" uid="uid://dru6nm4d5vrbt" path="res://Dialogue/PilotBeforeTakeOff.dialogue" id="46_xcb5n"]
 [ext_resource type="Resource" uid="uid://c6h7u07ffqvbi" path="res://Dialogue/RandomNPCS.dialogue" id="49_0sgyr"]
+[ext_resource type="AudioStream" uid="uid://ryeapuvqmqon" path="res://Assets/Audio/SFX/fire.wav" id="53_gwaj6"]
 [ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="53_uqdn7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwaj6"]
@@ -2245,6 +2246,12 @@ animation = &"Fire"
 autoplay = "Fire"
 frame_progress = 0.720448
 
+[node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire" unique_id=1997016528]
+stream = ExtResource("53_gwaj6")
+volume_db = -15.0
+autoplay = true
+max_distance = 50.0
+
 [node name="Fire2" type="AnimatedSprite3D" parent="Fires" unique_id=1272777452]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 16.317211, 10.277145, 3.730526)
 modulate = Color(1, 1, 1, 0.70980394)
@@ -2272,6 +2279,12 @@ sprite_frames = SubResource("SpriteFrames_13n8b")
 animation = &"Fire"
 autoplay = "Fire"
 frame_progress = 0.092328265
+
+[node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire4" unique_id=407225147]
+stream = ExtResource("53_gwaj6")
+volume_db = -15.0
+autoplay = true
+max_distance = 15.0
 
 [node name="Fire5" type="AnimatedSprite3D" parent="Fires" unique_id=867052313]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 29.107414, 10.277145, 2.0351324)
@@ -2302,6 +2315,12 @@ sprite_frames = SubResource("SpriteFrames_13n8b")
 animation = &"Fire"
 autoplay = "Fire"
 frame_progress = 0.0048488504
+
+[node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire7" unique_id=1412839182]
+stream = ExtResource("53_gwaj6")
+volume_db = -15.0
+autoplay = true
+max_distance = 30.0
 
 [node name="Node3D" type="Node3D" parent="." unique_id=341963467]
 

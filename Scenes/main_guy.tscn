@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://devw5h53i77sj" path="res://Assets/Sprites/guy.png" id="2_2sd6s"]
 [ext_resource type="Script" uid="uid://dwx4xq6g58fxs" path="res://Scripts/PlayerRayCast.gd" id="3_2sd6s"]
 [ext_resource type="Texture2D" uid="uid://bfxob7issqsod" path="res://Assets/Sprites/Crosshair.png" id="4_xwj3n"]
+[ext_resource type="AudioStream" uid="uid://by0env7cyo7bt" path="res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav" id="5_dxqho"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
 
@@ -78,3 +79,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_xwj3n")
 stretch_mode = 3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=228509979]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.7195045, 0)
+stream = ExtResource("5_dxqho")
+volume_db = -40.0
