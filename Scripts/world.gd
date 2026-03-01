@@ -12,3 +12,7 @@ func _process(_delta: float) -> void:
 		await fade_to_black_metallica.fade(1.0, 2.0).finished
 		get_tree().change_scene_to_file("res://Scenes/Finale.tscn")
 	
+
+
+func _on_example_balloon_visibility_changed() -> void:
+	visibility_changed.emit()

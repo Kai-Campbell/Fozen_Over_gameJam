@@ -1,6 +1,6 @@
-~ start
+~ start 
 if Global.has_met_mayor == false:
-	Mayor: I understand this idea is insane but what choice do we have?!
+	Mayor: I understand this idea is insane but what choice do we have?
 	Mayor: We have to continue the mission that was set upon us by the United States
 	Mayor: Who knows if they're all waiting for us to finish what we set out upon?
 	Mayor: We must get the plane up and running and make our way to the North Pole to end this mess!

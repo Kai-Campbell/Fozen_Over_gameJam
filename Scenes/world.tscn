@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dacbj4o2bxxkp" path="res://Scripts/world.gd" id="1_l33cg"]
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_o06y3"]
+[ext_resource type="PackedScene" uid="uid://7sa5ldv4vgfc" path="res://Dialogue/balloon.tscn" id="2_36g3o"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_k7acu"]
 [ext_resource type="Material" uid="uid://dvo0bnp4w0md3" path="res://Assets/textures/Tiny Textures 2/256x256/Elements/Elements_09-256x256.tres" id="3_5v1tr"]
 [ext_resource type="Material" uid="uid://gs8dxw24w7qu" path="res://Assets/textures/Tint Textures 1/256x256/Tile/Tile_07-256x256.tres" id="4_0fj1v"]
@@ -1140,6 +1141,8 @@ animations = [{
 
 [node name="World" type="Node3D" unique_id=575295862]
 script = ExtResource("1_l33cg")
+
+[node name="ExampleBalloon" parent="." unique_id=438813371 instance=ExtResource("2_36g3o")]
 
 [node name="World" type="Node3D" parent="." unique_id=878740783]
 script = ExtResource("1_o06y3")
@@ -2346,4 +2349,5 @@ font_size = 107
 
 [node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("53_uqdn7")]
 
+[connection signal="visibility_changed" from="ExampleBalloon" to="." method="_on_example_balloon_visibility_changed"]
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]
