@@ -1,4 +1,5 @@
 ~ start 
+do Global.text_start.emit()
 if Global.has_met_mayor == false:
 	Mayor: I understand this idea is insane but what choice do we have?
 	Mayor: We have to continue the mission that was set upon us by the United States
@@ -17,4 +18,5 @@ if Global.has_met_mayor == false:
 set Global.has_met_mayor = true
 else:
 	Mayor: Now get to it, we have the fate of the World in our hands!
+do Global.text_end.emit()
 => END

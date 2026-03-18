@@ -2328,7 +2328,7 @@ max_distance = 30.0
 [node name="Node3D" type="Node3D" parent="." unique_id=341963467]
 
 [node name="Label3D" type="Label3D" parent="Node3D" unique_id=694599035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.89896, 5.075723, 30.182844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.89896, 5.075723, 30.009165)
 text = "Military Post"
 font_size = 107
 

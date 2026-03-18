@@ -17,3 +17,8 @@ var decision_made_20_min = false
 var leave_pilot_to_die = false # if you leave the pilot
 var leave = false
 var kill_pilot = false
+
+'pause game'
+
+signal text_start
+signal text_end

@@ -1,4 +1,5 @@
 ~ start
+do Global.text_start.emit()
 if Global.has_meet_army:
 	%5 Army Guy: GET MOVING BOY I'M BUSY!
 	% Army Guy: The more you bother me, the less I get sad that you're probably gonna die.
@@ -22,4 +23,5 @@ else:
 	Army Guy: Now good luck boy. You're a real American Hero.
 	Army Guy: Or whats left of it...
 	set Global.has_meet_army = true
+do Global.text_end.emit()
 => END

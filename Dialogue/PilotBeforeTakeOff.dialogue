@@ -1,4 +1,5 @@
 ~ start
+do Global.text_start.emit()
 if Global.has_flight_stick == false:
 	Pilot: I can't take you anywhere without the flight stick yet!
 elif Global.has_light == false:
@@ -14,4 +15,6 @@ if Global.has_flight_stick == true && Global.has_light == true && Global.has_pro
 		set Global.leave = true
 	- No I've got something I have to do
 		Pilot: Alright, just come back whenever you're ready.
+
+do Global.text_end.emit()
 => END

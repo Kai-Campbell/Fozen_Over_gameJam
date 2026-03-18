@@ -1,4 +1,5 @@
 ~ start
+do Global.text_start.emit()
 Pilot: Welp, here we are.[wait=1]
 Pilot: Listen bud, I know you're probably scared, but what you're doing is really important
 Pilot: You're a real hero willing to sacrifice yourself for the benefit of mankind.
@@ -55,4 +56,5 @@ else:
 Pilot: Well [wait=1] it was nice knowing you kid
 Pilot: or adult or [wait=1] whatever you are.
 
+do Global.text_end.emit()
 => END
