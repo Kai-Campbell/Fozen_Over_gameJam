@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://720lqr03qxpv"]
+
+[ext_resource type="Script" uid="uid://b8bhnwarjh2dr" path="res://Scripts/splash_screen.gd" id="1_7m5qv"]
+[ext_resource type="FontFile" uid="uid://uk64bdgbqgeb" path="res://Assets/Fonts/Achtung Bravo.ttf" id="1_lus2m"]
+[ext_resource type="PackedScene" uid="uid://bqwg23muhrj5v" path="res://Scenes/main_menu.tscn" id="2_ki8ww"]
+[ext_resource type="Texture2D" uid="uid://bmthkv1u5oihn" path="res://Assets/KayCeeSplashScreen.png" id="2_pufkq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7m5qv"]
+font = ExtResource("1_lus2m")
+font_size = 60
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 37
+shadow_offset = Vector2(1, 1.365)
+
+[node name="Control" type="Control" unique_id=1090605875]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7m5qv")
+load_scene = ExtResource("2_ki8ww")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1983110346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35456306, 0.35456306, 0.35456306, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1091705488]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 460.22
+offset_right = 1118.0
+offset_bottom = 528.2202
+text = "A Game Jam Production"
+label_settings = SubResource("LabelSettings_7m5qv")
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=916247271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/CenterContainer" unique_id=933075582]
+layout_mode = 2
+texture = ExtResource("2_pufkq")

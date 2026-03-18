@@ -30,6 +30,7 @@ if Global.has_alien_device:
 			Mind: [wave]*Well that was easy*[/wave]
 			Mind: [wave]*Time to get out of here*[/wave]
 			set Global.kill_pilot = true
+			do Global.text_end.emit()
 			=> END!
 		- These are not the droids you are looking for
 			Pilot: [wave]These are not the droids we are looking for[/wave]
@@ -38,6 +39,7 @@ if Global.has_alien_device:
 			Mind: [wave]*Well that was easy*[/wave]
 			Mind: [wave]*Time to get out of here*[/wave]
 			set Global.kill_pilot = true
+			do Global.text_end.emit()
 			=> END!
 	- I'm scared! I'm not ready to die.
 		Pilot: Well, I can't take you back.

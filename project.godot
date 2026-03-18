@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Snow is Cold"
-run/main_scene="uid://bqwg23muhrj5v"
+run/main_scene="uid://720lqr03qxpv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,11 @@ Global="*uid://i534kfyqoyly"
 [dialogue_manager]
 
 runtime/balloon_path="res://Dialogue/balloon.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [editor_plugins]
 

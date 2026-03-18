@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dwx4xq6g58fxs" path="res://Scripts/PlayerRayCast.gd" id="3_2sd6s"]
 [ext_resource type="Texture2D" uid="uid://bfxob7issqsod" path="res://Assets/Sprites/Crosshair.png" id="4_xwj3n"]
 [ext_resource type="AudioStream" uid="uid://by0env7cyo7bt" path="res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav" id="5_dxqho"]
+[ext_resource type="AudioStream" uid="uid://bs2277fw54k76" path="res://Assets/Audio/Music/SnowisVeryCold.mp3" id="6_8t00b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
 
@@ -84,3 +85,8 @@ stretch_mode = 3
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.7195045, 0)
 stream = ExtResource("5_dxqho")
 volume_db = -40.0
+
+[node name="BackgroundMursic" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=228717811]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.008588, 0)
+stream = ExtResource("6_8t00b")
+volume_db = -20.0

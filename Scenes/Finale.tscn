@@ -346,4 +346,6 @@ debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=8641970]
 stream = ExtResource("19_2uy30")
+volume_db = 1.0
 autoplay = true
+max_distance = 136.53

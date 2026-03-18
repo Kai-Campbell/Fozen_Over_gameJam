@@ -17,7 +17,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.text_start.connect(stop)
 	Global.text_end.connect(move_again)
-	
+	$BackgroundMursic.play()
 
 func _input(event: InputEvent) -> void:
 	if can_move:
@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 	else:
+		$AudioStreamPlayer3D.stop()
 		velocity.x = 0
 		velocity.z = 0
 
