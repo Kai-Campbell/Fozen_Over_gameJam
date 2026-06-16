@@ -3,13 +3,24 @@ extends Node
 @onready var plane: Interactable = $Plane
 @onready var collision_shape_3d: CollisionShape3D = $Plane/CollisionShape3D
 @onready var fade_to_black_metallica: CanvasLayer = $"Fade To Black Metallica"
+@onready var pilot: Sprite3D = $pilot
+@onready var pilot_with_gun: Sprite3D = $PilotWithGun
 
 
 func _ready() -> void:
 	fade_to_black_metallica.fade(1.0, 0.0)
 	fade_to_black_metallica.fade(0.0, 2.0)
-	
-		
+	Global.pilot_with_gun.connect(change_pilot_sprite)
+	Global.choose_time.connect(disable_talk)
+
+func disable_talk():
+	$pilot/StaticBody3D.queue_free()
+
+func change_pilot_sprite():
+	pilot.visible = false
+	$"gun cock".play()
+	pilot_with_gun.visible = true
+
 func _process(_delta: float) -> void:
 	if Global.kill_pilot == true: # enables the exit plane collision
 		plane.set_collision_layer_value(2, true)

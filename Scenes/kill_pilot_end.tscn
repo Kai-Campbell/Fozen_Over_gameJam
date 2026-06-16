@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3wj7sk362cs8" path="res://Scripts/kill_pilot_end.gd" id="1_4gciu"]
 [ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="2_jdwng"]
+[ext_resource type="AudioStream" uid="uid://bpwdcwjn2aadl" path="res://Assets/Audio/Music/kill pilot song.mp3" id="3_p2e0o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bsvu1"]
 font_size = 25
@@ -81,11 +82,14 @@ theme_override_font_sizes/font_size = 40
 text = "Quit"
 
 [node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("2_jdwng")]
-visible = false
 
 [node name="Timer" type="Timer" parent="." unique_id=729298336]
 wait_time = 15.0
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=237742354]
+stream = ExtResource("3_p2e0o")
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]

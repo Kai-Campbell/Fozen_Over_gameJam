@@ -42,10 +42,10 @@ color = Color(0.4708554, 0.4708554, 0.4708554, 0.36862746)
 
 [node name="Button" type="Button" parent="." unique_id=443005239]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 394.0
-offset_right = 650.0
-offset_bottom = 511.0
+offset_left = 582.0
+offset_top = 414.0
+offset_right = 855.0
+offset_bottom = 523.0
 theme_override_constants/outline_size = 10
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_1ehe0")

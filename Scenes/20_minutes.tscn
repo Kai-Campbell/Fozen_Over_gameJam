@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5ymv40pshvyb" path="res://Scripts/20_minutes.gd" id="1_ed75o"]
 [ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="2_chgay"]
+[ext_resource type="AudioStream" uid="uid://b87i22flbx56m" path="res://Assets/Audio/Music/20 min song.mp3" id="3_chgay"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8yoep"]
 font_size = 25
@@ -88,4 +89,11 @@ text = "Quit"
 wait_time = 15.0
 autostart = true
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1602666530]
+position = Vector2(672, 306)
+stream = ExtResource("3_chgay")
+autoplay = true
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

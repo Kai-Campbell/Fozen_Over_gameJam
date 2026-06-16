@@ -10,6 +10,7 @@ var has_alien_device = false
 var has_meet_army = false
 var has_met_kid = false
 var has_met_mayor = false
+var has_talked_pilot_finale = false
 
 'events'
 var decision_made_10_sec = false # if you blow the bomb up
@@ -19,6 +20,10 @@ var leave = false
 var kill_pilot = false
 
 'pause game'
-
 signal text_start
 signal text_end
+
+'level specific'
+signal start_game
+signal pilot_with_gun
+signal choose_time

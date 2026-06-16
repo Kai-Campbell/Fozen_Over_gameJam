@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1kkq1423cjax"
-path.s3tc="res://.godot/imported/Wood_14-256x256.png-aa74735d35891b2635317fdb7cfccfb5.s3tc.ctex"
+uid="uid://7227iua34b8b"
+path.s3tc="res://.godot/imported/PilotWithGun.png-edac107141ce8262bfcda9555d2adee7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Tint Textures 1/256x256/Wood/Wood_14-256x256.png"
-dest_files=["res://.godot/imported/Wood_14-256x256.png-aa74735d35891b2635317fdb7cfccfb5.s3tc.ctex"]
+source_file="res://Assets/Sprites/PilotWithGun.png"
+dest_files=["res://.godot/imported/PilotWithGun.png-edac107141ce8262bfcda9555d2adee7.s3tc.ctex"]
 
 [params]
 

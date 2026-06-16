@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1kkq1423cjax"
-path.s3tc="res://.godot/imported/Wood_14-256x256.png-aa74735d35891b2635317fdb7cfccfb5.s3tc.ctex"
+uid="uid://ss4np158xwdb"
+path.s3tc="res://.godot/imported/Pilot2.png-6ef1c244c0d65eee8295e5f968390bf7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Tint Textures 1/256x256/Wood/Wood_14-256x256.png"
-dest_files=["res://.godot/imported/Wood_14-256x256.png-aa74735d35891b2635317fdb7cfccfb5.s3tc.ctex"]
+source_file="res://Assets/Sprites/Pilot2.png"
+dest_files=["res://.godot/imported/Pilot2.png-6ef1c244c0d65eee8295e5f968390bf7.s3tc.ctex"]
 
 [params]
 

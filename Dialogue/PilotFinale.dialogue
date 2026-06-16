@@ -42,21 +42,26 @@ if Global.has_alien_device:
 			do Global.text_end.emit()
 			=> END!
 	- I'm scared! I'm not ready to die.
+		do Global.pilot_with_gun.emit()
 		Pilot: Well, I can't take you back.
 		Pilot: Sorry bud, this is the way it's gotta be.
 	- Please take me back! I'm not doing this!
+		do Global.pilot_with_gun.emit()
 		Pilot: Sorry bud, strict orders to not take you back
 		Pilot: Once you're here it's decided.
 else:
 	- I'm scared! I'm not ready to die.
+		do Global.pilot_with_gun.emit()
 		Pilot: Well, I can't take you back.
 		Pilot: Sorry bud, this is the way it's gotta be.
 	- Please take me back! I'm not doing this!
+		do Global.pilot_with_gun.emit()
 		Pilot: Sorry bud, strict orders to not take you back
 		Pilot: Once you're here it's decided.
 
 Pilot: Well [wait=1] it was nice knowing you kid
 Pilot: or adult or [wait=1] whatever you are.
 
+do Global.choose_time.emit()
 do Global.text_end.emit()
 => END

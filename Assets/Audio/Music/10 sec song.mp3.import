@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvhxuw4stxnvk"
+path="res://.godot/imported/10 sec song.mp3-349c751c2c3644e3bca997c29377cba9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/10 sec song.mp3"
+dest_files=["res://.godot/imported/10 sec song.mp3-349c751c2c3644e3bca997c29377cba9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
