@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bgqwhb4mr1m4c"
+path="res://.godot/imported/Bunker.map-b95b0b9d8b9cdbec7296b699ab28bb8e.tres"
+
+[deps]
+
+source_file="res://Assets/Map/Bunker.map"
+dest_files=["res://.godot/imported/Bunker.map-b95b0b9d8b9cdbec7296b699ab28bb8e.tres"]
+
+[params]
+

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bktqnalc4mdeu"
+path="res://.godot/imported/GuyinBunker.dialogue-19f5991c6bdb3fcb0ce16adbb225cbdd.tres"
+
+[deps]
+
+source_file="res://Dialogue/GuyinBunker.dialogue"
+dest_files=["res://.godot/imported/GuyinBunker.dialogue-19f5991c6bdb3fcb0ce16adbb225cbdd.tres"]
+
+[params]
+
+defaults=true

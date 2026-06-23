@@ -1,0 +1,11 @@
+~ start
+Nathan: Hey, what's up?
+- What are you doing here?
+	Nathan: I'm hiding from the boss man.
+	Nathan: He asked me to find something for him here and hasn't checked up on me in 3 hours.
+	Nathan: Please don't tell him I'm here.
+- Are you hiding something here?
+	Nathan: No. Just chilling right now.
+	Nathan: I'm hiding from the boss man.
+	Nathan: Please don't tell him I'm here.
+=> END

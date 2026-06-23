@@ -4,6 +4,9 @@ extends Node3D
 @onready var fade_to_black_metallica: CanvasLayer = $"Fade To Black Metallica"
 @onready var start_door: CSGBox3D = $StartDoor
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var main_guy: Node3D = $MainGuy
+@onready var bunk_pos: Node3D = $"Bunker Stuff/Bunk POS"
+@onready var leave_pos: Node3D = $"Bunker Stuff/Leave POS"
 
 func _ready() -> void:
 	#this signal emits after talking to the mayor so the door opens
@@ -26,3 +29,10 @@ func move_door():
 
 func _on_example_balloon_visibility_changed() -> void:
 	visibility_changed.emit()
+
+func _on_secret_door_interacted(_body: Variant) -> void:
+	main_guy.get_child(0).global_position = bunk_pos.global_position
+
+func _on_leave_interacted(_body: Variant) -> void:
+	main_guy.get_child(0).global_position = leave_pos.global_position
+	animation_player.play("Block Entrance")

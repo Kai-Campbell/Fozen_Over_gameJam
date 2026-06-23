@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dqubblf350bgr"
+path="res://.godot/imported/Shipping Container.dialogue-424da1647adb8f102c8f745c60a0fdf0.tres"
+
+[deps]
+
+source_file="res://Dialogue/Shipping Container.dialogue"
+dest_files=["res://.godot/imported/Shipping Container.dialogue-424da1647adb8f102c8f745c60a0fdf0.tres"]
+
+[params]
+
+defaults=true
