@@ -4,7 +4,8 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 
 var reg_music = load("res://Assets/Audio/Music/SnowisVeryCold.mp3")
-var bunk_music = load("res://Assets/Audio/Music/Bunk.mp3")
+var bunk_music = load("res://Assets/Audio/Music/BunkTheme.mp3")
+var finale_music = load("res://Assets/Audio/Music/Finale.mp3")
 
 const SPEED = 9.0
 const RUN = 20.0

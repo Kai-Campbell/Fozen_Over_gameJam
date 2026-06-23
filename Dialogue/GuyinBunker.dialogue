@@ -1,18 +1,42 @@
 ~ start
 do Global.text_start.emit()
-You: Um, Hello?
-Bobby: Woah! Who are you?! How did you get here?!
-You: There was a hatch and I just crawled down here.
-Bobby: Oh crap! I forgot to block the hatch!
-- What is this place?
-	Bobby: This is where I live. My name's Bobby. I disappeared down here before they sent me away to the North Pole. You're not trying to find me are you?
-- Who are you
-	Bobby: My names Bobby. I moved down here before they sent me away to the North Pole. You're not here to find me are you?
-You: No I'm not. But what exactly are you hiding from down here?
-You: Also, how do you poop. Where do you do that?
-Bobby: The bucket next to my desk duh. Don't ask about how I get rid of it.
-You: Okay...
-Bobby: Anyway, I'm hiding down here because they elected me to go blow up the nuke. Sacrifice myself just like that!
-Bobby: Can you believe those fools?
+if Global.has_met_bunker_guy:
+	% Bobby: Leave already, I don't want people wondering around looking for you!
+	% Bobby: I don't get great wifi down here, but atleast I can still play competitive counter strike.
+	% Bobby: I've been stuck on version 4.3 for a while, but I'm scared to update and break my spaghetti code.
+else:
+	You: Um, Hello?
+	Bobby: Woah! Who are you?! How did you get here?!
+	You: There was a hatch and I just crawled down here.
+	Bobby: Oh crap! I forgot to block the hatch!
+	- What is this place?
+		Bobby: This is where I live. My name's Bobby. I disappeared down here before they sent me away to the North Pole. You're not trying to find me are you?
+	- Who are you
+		Bobby: My names Bobby. I moved down here before they sent me away to the North Pole. You're not here to find me are you?
+	You: No I'm not. But what exactly are you hiding from down here?
+	You: Also, how do you poop. Where do you do that?
+	Bobby: The bucket next to my desk duh. Don't ask about how I get rid of it.
+	You: Okay...
+	Bobby: Anyway, I'm hiding down here because they elected me to go blow up the nuke. Sacrifice myself just like that!
+	Bobby: Can you believe those fools?
+	You: Wait, what?
+	Bobby: Yeah.
+	Bobby: Wait, you don't know?
+	You: They were gonna send you to blow up a nuke?
+	Bobby: Listen to me right now!
+	Bobby: If they talk to you about being some hero or something, DON'T LISTEN!
+	Bobby: They're using you! You need to find a way out! Don't listen to them!
+	- Oh crap! Can I hide here with you?
+		Bobby: No way! Once you leave I'm hiding the hatch again. No way you can't stay here.
+	- What should I do?
+		Bobby: You got to find some way to get out of it. I don't know how but the pilot isn't gonna take you back once you're gone.
+	Bobby: Listen, if you want to get out of it, you got to find some way to convince the pilot once you're at the North Pole.
+	Bobby: You can't bail now or everyone's gonna turn on you.
+	Bobby: There might be some way to force the pilot to let you go, if you catch my drift...
+	Bobby: Take a look around and see if you can find something. Thats all I can do.
+	You: Alright, if that's my only option then I'll have to find some way.
+	You: Thank you Bobby. I guess this is the last time we'll meet.
+	Bobby: Good luck... dude or woman or whatever.
+	set Global.has_met_bunker_guy = true
 do Global.text_end.emit()
 => END

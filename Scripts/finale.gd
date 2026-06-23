@@ -5,6 +5,7 @@ extends Node
 @onready var fade_to_black_metallica: CanvasLayer = $"Fade To Black Metallica"
 @onready var pilot: Sprite3D = $pilot
 @onready var pilot_with_gun: Sprite3D = $PilotWithGun
+@onready var main_guy: Node3D = $MainGuy
 
 
 func _ready() -> void:
@@ -12,6 +13,7 @@ func _ready() -> void:
 	fade_to_black_metallica.fade(0.0, 2.0)
 	Global.pilot_with_gun.connect(change_pilot_sprite)
 	Global.choose_time.connect(disable_talk)
+	main_guy.get_child(0).change_music(main_guy.get_child(0).finale_music)
 
 func disable_talk():
 	$pilot/StaticBody3D.queue_free()

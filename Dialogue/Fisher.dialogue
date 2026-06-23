@@ -1,0 +1,9 @@
+~ start
+do Global.text_start.emit()
+% Haven't even got a nibble today!
+% All I've caught so far is dirt for some reason...
+% I managed to catch a carp, but that's bad eats so I threw it back!
+% Lucky we got this hole here. No where else we could catch fish.
+% We better catch something soon before they make us burn these chairs too.
+do Global.text_end.emit()
+=> END

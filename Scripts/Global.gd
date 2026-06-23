@@ -11,6 +11,8 @@ var has_meet_army = false
 var has_met_kid = false
 var has_met_mayor = false
 var has_talked_pilot_finale = false
+var has_met_bunker_guy = false
+
 
 'events'
 var decision_made_10_sec = false # if you blow the bomb up
