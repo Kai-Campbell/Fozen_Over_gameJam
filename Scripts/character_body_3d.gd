@@ -3,6 +3,9 @@ extends CharacterBody3D
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 
+var reg_music = load("res://Assets/Audio/Music/SnowisVeryCold.mp3")
+var bunk_music = load("res://Assets/Audio/Music/Bunk.mp3")
+
 const SPEED = 9.0
 const RUN = 20.0
 const JUMP_VELOCITY = 4.5
@@ -58,6 +61,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = 0
 
 	move_and_slide()
+
+func change_music(song):
+	$BackgroundMursic.stream = song
+	$BackgroundMursic.play()
+
 
 'these functions control whether the player can move when text starts'
 func stop():

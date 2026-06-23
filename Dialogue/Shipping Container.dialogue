@@ -1,4 +1,5 @@
 ~ start
+do Global.text_start.emit()
 Nathan: Hey, what's up?
 - What are you doing here?
 	Nathan: I'm hiding from the boss man.
@@ -8,4 +9,5 @@ Nathan: Hey, what's up?
 	Nathan: No. Just chilling right now.
 	Nathan: I'm hiding from the boss man.
 	Nathan: Please don't tell him I'm here.
+do Global.text_end.emit()
 => END

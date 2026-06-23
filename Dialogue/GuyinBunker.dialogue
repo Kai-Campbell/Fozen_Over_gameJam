@@ -1,11 +1,18 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+do Global.text_start.emit()
+You: Um, Hello?
+Bobby: Woah! Who are you?! How did you get here?!
+You: There was a hatch and I just crawled down here.
+Bobby: Oh crap! I forgot to block the hatch!
+- What is this place?
+	Bobby: This is where I live. My name's Bobby. I disappeared down here before they sent me away to the North Pole. You're not trying to find me are you?
+- Who are you
+	Bobby: My names Bobby. I moved down here before they sent me away to the North Pole. You're not here to find me are you?
+You: No I'm not. But what exactly are you hiding from down here?
+You: Also, how do you poop. Where do you do that?
+Bobby: The bucket next to my desk duh. Don't ask about how I get rid of it.
+You: Okay...
+Bobby: Anyway, I'm hiding down here because they elected me to go blow up the nuke. Sacrifice myself just like that!
+Bobby: Can you believe those fools?
+do Global.text_end.emit()
 => END
