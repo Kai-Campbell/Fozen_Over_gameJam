@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bqwg23muhrj5v" path="res://Scenes/main_menu.tscn" id="2_ki8ww"]
 [ext_resource type="Texture2D" uid="uid://bmthkv1u5oihn" path="res://Assets/KayCeeSplashScreen.png" id="2_pufkq"]
 [ext_resource type="AudioStream" uid="uid://cs832vot5bham" path="res://Assets/Audio/Music/Intro Jingle.mp3" id="5_ki8ww"]
+[ext_resource type="AudioStream" uid="uid://bbtp671becdi6" path="res://Assets/Audio/SFX/coldd.mp3" id="6_mm423"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7m5qv"]
 font = ExtResource("1_lus2m")
@@ -26,6 +27,7 @@ script = ExtResource("1_7m5qv")
 load_scene = ExtResource("2_ki8ww")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1983110346]
+z_index = -2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,4 +60,18 @@ texture = ExtResource("2_pufkq")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=300782884]
 position = Vector2(643, 319)
 stream = ExtResource("5_ki8ww")
-volume_db = 2.0
+volume_db = 5.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1517327045]
+z_index = -1
+position = Vector2(636, -10)
+amount = 100
+lifetime = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(720, 1)
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+
+[node name="brrr" type="AudioStreamPlayer2D" parent="." unique_id=1654205717]
+position = Vector2(647, 317)
+stream = ExtResource("6_mm423")

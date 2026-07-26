@@ -15,6 +15,8 @@ func _ready() -> void:
 	fade()
 	await get_tree().create_timer(1.5).timeout
 	$AudioStreamPlayer2D.play()
+	await $AudioStreamPlayer2D.finished
+	$brrr.play()
 
 func fade() -> void:
 	label.modulate.a = 0.0

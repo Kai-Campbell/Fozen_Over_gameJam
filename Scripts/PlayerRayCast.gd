@@ -32,6 +32,10 @@ func _physics_process(_delta: float) -> void:
 					collider.get_parent().visible = false
 					Global.has_alien_device = true
 					collider.queue_free()
+				if collider.is_in_group("Gun"):
+					collider.get_parent().visible = false
+					Global.has_gun = true
+					collider.queue_free()
 			if collider.is_in_group("Stuff"):
 				collider.interact(self)
 func _stop_raycast():

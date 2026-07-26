@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://comkqg2klwix7"
+path="res://.godot/imported/shot_pilot.dialogue-e0d558fa174746135875c5192a866300.tres"
+
+[deps]
+
+source_file="res://Dialogue/shot_pilot.dialogue"
+dest_files=["res://.godot/imported/shot_pilot.dialogue-e0d558fa174746135875c5192a866300.tres"]
+
+[params]
+
+defaults=true

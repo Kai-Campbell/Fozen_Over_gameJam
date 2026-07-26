@@ -5,6 +5,7 @@ var has_flight_stick = false
 var has_light = false
 var has_prop = false
 var has_alien_device = false
+var has_gun = false
 
 'People'
 var has_meet_army = false
@@ -12,14 +13,17 @@ var has_met_kid = false
 var has_met_mayor = false
 var has_talked_pilot_finale = false
 var has_met_bunker_guy = false
+var has_met_gun_guy = false
 
 
 'events'
 var decision_made_10_sec = false # if you blow the bomb up
 var decision_made_20_min = false
 var leave_pilot_to_die = false # if you leave the pilot
+var leave_shooted_pilot = false
 var leave = false
 var kill_pilot = false
+var shoot_pilot = false
 
 'pause game'
 signal text_start
@@ -29,3 +33,4 @@ signal text_end
 signal start_game
 signal pilot_with_gun
 signal choose_time
+signal pilot_dead_lol

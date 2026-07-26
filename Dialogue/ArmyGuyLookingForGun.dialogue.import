@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cnn1qs8wfye2q"
+path="res://.godot/imported/ArmyGuyLookingForGun.dialogue-974d531d778b7abbc1b89ea2fbe4ef43.tres"
+
+[deps]
+
+source_file="res://Dialogue/ArmyGuyLookingForGun.dialogue"
+dest_files=["res://.godot/imported/ArmyGuyLookingForGun.dialogue-974d531d778b7abbc1b89ea2fbe4ef43.tres"]
+
+[params]
+
+defaults=true

@@ -6,6 +6,7 @@ extends Node
 @onready var pilot: Sprite3D = $pilot
 @onready var pilot_with_gun: Sprite3D = $PilotWithGun
 @onready var main_guy: Node3D = $MainGuy
+@onready var shotpilotdeadlol: Interactable = $shotpilotdeadlol
 
 
 func _ready() -> void:
@@ -27,7 +28,15 @@ func _process(_delta: float) -> void:
 	if Global.kill_pilot == true: # enables the exit plane collision
 		plane.set_collision_layer_value(2, true)
 		plane.set_collision_mask_value(2, true)
-		
+	
+	if Global.shoot_pilot == true:
+		shotpilotdeadlol.set_collision_layer_value(2, true)
+		shotpilotdeadlol.set_collision_mask_value(2, true)
+	
+	if Global.leave_shooted_pilot == true:
+		await fade_to_black_metallica.fade(1.0, 1.5).finished
+		#get_tree().change_scene_to_file("res://Scenes/10Sec.tscn")
+	
 	if Global.decision_made_10_sec == true:
 		await fade_to_black_metallica.fade(1.0, 1.5).finished
 		get_tree().change_scene_to_file("res://Scenes/10Sec.tscn") # change this to a cutscene

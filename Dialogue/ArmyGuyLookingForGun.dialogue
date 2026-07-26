@@ -1,0 +1,45 @@
+~ start
+do Global.text_start.emit()
+if Global.has_met_gun_guy:
+	if not Global.has_gun:
+		% John: Let me know when you find it
+		% John: I swear it's somewhere near here!
+		% John: Man, I'm in so much trouble!
+	else:
+		John: Hey! Have you found it yet?
+		- I found you're gun. Here (give gun)
+			John: No way! You're a real hero!
+			John: I'll never forget this!
+		- No I can't find it (keep the gun)
+			John: Alright I guess it's time to confess to Sergeant
+			John: Thanks for trying I guess.
+else:
+	if not Global.has_gun:
+		John: Hey, thank god you're here! I lost something important and the old man's gonna chew me out for it!
+		John: I lost my service pistol. Please help me find it. I could've swore it was somewhere near here!
+		- What's in it for me?
+			John: Well, I don't really have anything to give.
+			John: It would just kinda be a nice thing you know?
+			John: You would be my hero for sure though!
+			- Yeah, I'm not doing it for free
+				John: Fine! I'll just keep looking
+				John: Man the Sergeant's gonna kill me!
+				do Global.text_end.emit()
+				set Global.has_met_gun_guy = true
+				=> END!
+			- Sure I'll try to find it for you
+				John: Thanks, you're a life saver!
+				do Global.text_end.emit()
+				set Global.has_met_gun_guy = true
+				=> END!
+		- sure I'll help you find it.
+			John: Thanks, you're a life saver!
+			do Global.text_end.emit()
+			set Global.has_met_gun_guy = true
+			=> END!
+		- Sorry can't right now.
+			do Global.text_end.emit()
+			=> END!
+
+do Global.text_end.emit()
+=> END

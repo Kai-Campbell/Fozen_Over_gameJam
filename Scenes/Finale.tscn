@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://d2j0jiabwomjv" path="res://Dialogue/LeavePilot.dialogue" id="17_h6g0p"]
 [ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="18_ni086"]
 [ext_resource type="AudioStream" uid="uid://kb65vshyl0jx" path="res://Assets/Audio/SFX/wind.wav" id="19_2uy30"]
+[ext_resource type="Resource" uid="uid://comkqg2klwix7" path="res://Dialogue/shot_pilot.dialogue" id="20_w6hvu"]
 [ext_resource type="Texture2D" uid="uid://7227iua34b8b" path="res://Assets/Sprites/PilotWithGun.png" id="20_yck00"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
@@ -365,6 +366,18 @@ prompt_text = "Leave"
 dialogue = ExtResource("17_h6g0p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane" unique_id=96815466]
+shape = SubResource("BoxShape3D_fn60o")
+debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)
+
+[node name="shotpilotdeadlol" type="StaticBody3D" parent="." unique_id=2074510805 groups=["Talk"]]
+transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 43.404327)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("12_uecdt")
+prompt_text = "Leave"
+dialogue = ExtResource("20_w6hvu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shotpilotdeadlol" unique_id=493990172]
 shape = SubResource("BoxShape3D_fn60o")
 debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)
 

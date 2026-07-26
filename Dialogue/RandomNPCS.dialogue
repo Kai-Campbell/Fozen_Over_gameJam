@@ -1,7 +1,6 @@
 ~ start
 do Global.text_start.emit()
 % I can't feel my left leg [wait=1] or my right leg [wait=1] or my third leg for that matter!
-% If only we had some brave random individual to blow up the polar ice caps to make the world hot again
 % Patroling the tundra almost makes you wish for a nuclear heatwave.
 % I can't feel my face! [wait=1] where is my face?
 % I wish I could make a video game in an open source platform for free! [wait=1] hugh a man can dream.
@@ -14,5 +13,7 @@ do Global.text_start.emit()
 % I used to be an adventurer like you, [wait=1] then I took an icicle to the knee
 % I can't tell if I lost my arms, or if they just froze off. [wait=0.5] or if I never had arms to begin with.
 % The fire doesn't heat much. It's too flat. If only it was round, then it might heat me up!
+% You really are a hero, willing to sacrifice yourself and all that. We're so proud of you!
+% There goes our hero! Thank god someone like you was willing to step up!
 do Global.text_end.emit()
 => END

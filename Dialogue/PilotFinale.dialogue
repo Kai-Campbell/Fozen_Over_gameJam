@@ -20,8 +20,9 @@ Pilot: Go to the North pole, blow up the polar ice cap so the world cools down.
 Pilot: You know... cause the World is kinda frozen over?
 Pilot: Anyway... I'm gonna get going now, just go over there and activate it and we'll all be proud [wait=1]or whatever
 Pilot: Oh and please set a timer for 20 minutes, that'll give me enough time to get out of the blast raidus.
+Mind: [wave]*You notice the pilot is reaching behind him and staring back at you strangely, listening closely to what you will say next.*[/wave]
 
-if Global.has_alien_device:
+if Global.has_alien_device and Global.has_gun:
 	- Use Mind Control Device
 		Pilot: Hugh what happend? [wait=1] My head hurts like crazy!
 		- You are going to blow up the nuke and set it for 20 minutes from now
@@ -31,6 +32,7 @@ if Global.has_alien_device:
 			Mind: [wave]*Time to get out of here*[/wave]
 			set Global.kill_pilot = true
 			do Global.text_end.emit()
+			do Global.choose_time.emit()
 			=> END!
 		- These are not the droids you are looking for
 			Pilot: [wave]These are not the droids we are looking for[/wave]
@@ -40,6 +42,74 @@ if Global.has_alien_device:
 			Mind: [wave]*Time to get out of here*[/wave]
 			set Global.kill_pilot = true
 			do Global.text_end.emit()
+			do Global.choose_time.emit()
+			=> END!
+	- Pull out gun and shoot Pilot
+		Pilot: woah woah buddy! Let's talk about this...
+		You: Do you really think I'm stupid enough to believe in all this hero nonsense? I knw what you guys were planning this whole time.
+		You: Not like it really matters. Once you're gone I'm taking the plane and flying far away from here.
+		Pilot: Listen. You can't just leave me here. I've got people waiting for me back at base. If this plane doesn't come back they'll look for you.
+		Pilot: I know my way back, you don't...
+		Pilot: Not like you'll get far. The worlds still frozen over, you're not gonna sit on some beach in a lawn chair soaking up the sun anyways.
+		Pilot: You know what? It doesn't matter what you do to me now. We're both dead as I see it. You just don't have anything to lose like me.
+		Pilot: Go ahead. Just make it quick... please...
+		set Global.shoot_pilot = true
+		do Global.pilot_dead_lol.emit()
+		do Global.text_end.emit()
+		do Global.choose_time.emit()
+		=> END!
+	- I'm scared! I'm not ready to die.
+		do Global.pilot_with_gun.emit()
+		Pilot: Well, I can't take you back.
+		Pilot: Sorry bud, this is the way it's gotta be.
+	- Please take me back! I'm not doing this!
+		do Global.pilot_with_gun.emit()
+		Pilot: Sorry bud, strict orders to not take you back
+		Pilot: Once you're here it's decided.
+elif Global.has_gun:
+	- Pull out gun and shoot Pilot
+		Pilot: woah woah buddy! Let's talk about this...
+		You: Do you really think I'm stupid enough to believe in all this hero nonsense? I knw what you guys were planning this whole time.
+		You: Not like it really matters. Once you're gone I'm taking the plane and flying far away from here.
+		Pilot: Listen. You can't just leave me here. I've got people waiting for me back at base. If this plane doesn't come back they'll look for you.
+		Pilot: I know my way back, you don't...
+		Pilot: Not like you'll get far. The worlds still frozen over, you're not gonna sit on some beach in a lawn chair soaking up the sun anyways.
+		Pilot: You know what? It doesn't matter what you do to me now. We're both dead as I see it. You just don't have anything to lose like me.
+		Pilot: Go ahead. Just make it quick... please...
+		set Global.shoot_pilot = true
+		do Global.pilot_dead_lol.emit()
+		do Global.text_end.emit()
+		do Global.choose_time.emit()
+		=> END!
+	- I'm scared! I'm not ready to die.
+		do Global.pilot_with_gun.emit()
+		Pilot: Well, I can't take you back.
+		Pilot: Sorry bud, this is the way it's gotta be.
+	- Please take me back! I'm not doing this!
+		do Global.pilot_with_gun.emit()
+		Pilot: Sorry bud, strict orders to not take you back
+		Pilot: Once you're here it's decided.
+elif Global.has_alien_device:
+	- Use Mind Control Device
+		Pilot: Hugh what happend? [wait=1] My head hurts like crazy!
+		- You are going to blow up the nuke and set it for 20 minutes from now
+			Pilot: [wave]I will blow up the nuke in 20 minutes[/wave]
+			Pilot: [wave]Anything you say is my command.[/wave]
+			Mind: [wave]*Well that was easy*[/wave]
+			Mind: [wave]*Time to get out of here*[/wave]
+			set Global.kill_pilot = true
+			do Global.text_end.emit()
+			do Global.choose_time.emit()
+			=> END!
+		- These are not the droids you are looking for
+			Pilot: [wave]These are not the droids we are looking for[/wave]
+			You: Also go blow up that nuke in 20 minutes.
+			Pilot: [wave]I will blow up the nuke in 20 minutes[/wave]
+			Mind: [wave]*Well that was easy*[/wave]
+			Mind: [wave]*Time to get out of here*[/wave]
+			set Global.kill_pilot = true
+			do Global.text_end.emit()
+			do Global.choose_time.emit()
 			=> END!
 	- I'm scared! I'm not ready to die.
 		do Global.pilot_with_gun.emit()
