@@ -4,7 +4,7 @@ extends Node3D
 @onready var fade_to_black_metallica: CanvasLayer = $"Fade To Black Metallica"
 @onready var start_door: CSGBox3D = $StartDoor
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var main_guy: Node3D = $MainGuy
+@onready var main_guy: Node3D = $CharacterBody3D
 @onready var bunk_pos: Node3D = $"Bunker Stuff/Bunk POS"
 @onready var leave_pos: Node3D = $"Bunker Stuff/Leave POS"
 
@@ -35,12 +35,12 @@ func _on_example_balloon_visibility_changed() -> void:
 func _on_secret_door_interacted(_body: Variant) -> void:
 	fade_to_black_metallica.fade(1.0, 0.0)
 	fade_to_black_metallica.fade(0.0, 2.0)
-	main_guy.get_child(0).global_position = bunk_pos.global_position
-	main_guy.get_child(0).change_music(main_guy.get_child(0).bunk_music)
+	main_guy.global_position = bunk_pos.global_position
+	main_guy.change_music(main_guy.bunk_music)
 
 func _on_leave_interacted(_body: Variant) -> void:
 	fade_to_black_metallica.fade(1.0, 0.0)
 	fade_to_black_metallica.fade(0.0, 1.0)
-	main_guy.get_child(0).global_position = leave_pos.global_position
-	main_guy.get_child(0).change_music(main_guy.get_child(0).reg_music)
+	main_guy.global_position = leave_pos.global_position
+	main_guy.change_music(main_guy.reg_music)
 	animation_player.play("Block Entrance")
