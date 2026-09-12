@@ -3657,6 +3657,21 @@ size = Vector3(4.508789, 7.025879, 4.477539)
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_im3sq"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.30980393)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5ivla"]
+material = SubResource("StandardMaterial3D_im3sq")
+radius = 53.055
+height = 73.262
+radial_segments = 5
+rings = 5
+
+[sub_resource type="Gradient" id="Gradient_5yf44"]
+offsets = PackedFloat32Array(0, 0.34666666, 0.6755555, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.96444446, 0.96444446, 0.96444446, 1, 0.972549, 0.972549, 0.972549, 1, 0.99857575, 0.99521905, 0.99525636, 0)
+
 [node name="World" type="Node3D" unique_id=575295862]
 script = ExtResource("1_l33cg")
 
@@ -6994,9 +7009,43 @@ radius = 3.1855469
 height = 0.80773926
 material = SubResource("StandardMaterial3D_2fj36")
 
-[node name="FogVolume" type="FogVolume" parent="." unique_id=1055764079]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.433838, 13.70154, -72.90572)
-size = Vector3(38.677246, 12.928711, 2)
+[node name="Fog" type="Node3D" parent="." unique_id=66296382]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Fog" unique_id=1435049298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.458878, 17.59994, -270.53632)
+amount = 60
+lifetime = 10.0
+randomness = 0.5
+mesh = SubResource("SphereMesh_5ivla")
+emission_shape = 3
+emission_box_extents = Vector3(223.485, 26.325, 1)
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0.1, 0, 0.1)
+color_ramp = SubResource("Gradient_5yf44")
+
+[node name="CPUParticles3D2" type="CPUParticles3D" parent="Fog" unique_id=1789754916]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -185.8127, 17.59994, -131.33064)
+amount = 40
+lifetime = 10.0
+randomness = 0.5
+mesh = SubResource("SphereMesh_5ivla")
+emission_shape = 3
+emission_box_extents = Vector3(91.71, 26.325, 1)
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0.1, 0, 0.1)
+color_ramp = SubResource("Gradient_5yf44")
+
+[node name="CPUParticles3D3" type="CPUParticles3D" parent="Fog" unique_id=1510082357]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 243.4326, 17.59994, -154.80109)
+amount = 40
+lifetime = 10.0
+randomness = 0.5
+mesh = SubResource("SphereMesh_5ivla")
+emission_shape = 3
+emission_box_extents = Vector3(91.71, 26.325, 1)
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0.1, 0, 0.1)
+color_ramp = SubResource("Gradient_5yf44")
 
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]
 [connection signal="interacted" from="Bunker Stuff/secret door" to="." method="_on_secret_door_interacted"]

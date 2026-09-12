@@ -25,6 +25,9 @@ var leave = false
 var kill_pilot = false
 var shoot_pilot = false
 
+'interactables'
+signal item_aquired(item : String)
+
 'pause game'
 signal text_start
 signal text_end

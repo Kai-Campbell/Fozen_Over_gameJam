@@ -75,6 +75,7 @@ if Global.has_prop == false:
 				- Whatever little bastard
 				
 				set Global.has_prop = true
+	do Global.item_aquired.emit("Propeller")
 
 else:
 	do Global.text_start.emit()

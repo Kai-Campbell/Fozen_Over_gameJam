@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
+@onready var label: Label = $UI/Label
 
 
 var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
@@ -22,6 +23,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Global.text_start.connect(stop)
 	Global.text_end.connect(move_again)
+	Global.item_aquired.connect(display_item)
 	$BackgroundMursic.play()
 
 func _input(event: InputEvent) -> void:
@@ -75,3 +77,8 @@ func stop():
 
 func move_again():
 	can_move = true
+
+func display_item(item : String):
+	label.text = str(item, " picked up")
+	await get_tree().create_timer(3).timeout
+	label.text = ""

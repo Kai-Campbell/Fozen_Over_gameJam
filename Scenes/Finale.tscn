@@ -342,9 +342,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.73831, 0, 16.497662)
 stream = ExtResource("15_3k8hl")
 volume_db = -8.0
 
-[node name="MainGuy" parent="." unique_id=1261746303 instance=ExtResource("12_vxaqe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.186161, -1.4801314, 30.73265)
-
 [node name="Bomb" type="StaticBody3D" parent="." unique_id=510123588 groups=["Talk"]]
 transform = Transform3D(3.905, 0, 0, 0, 3.905, 0, 0, 0, 3.905, 35.011623, -1.1897861, -1.6447077)
 collision_layer = 2
@@ -401,3 +398,6 @@ direction = Vector3(0, 0, 0)
 gravity = Vector3(0, -50, 0)
 initial_velocity_min = 9.0
 initial_velocity_max = 9.0
+
+[node name="MainGuy" parent="." unique_id=1469314718 instance=ExtResource("12_vxaqe")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.53908, 0, 28.723757)
