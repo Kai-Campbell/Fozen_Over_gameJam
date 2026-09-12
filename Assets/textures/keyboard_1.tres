@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://noiemlp51iv4"]
+
+[ext_resource type="Texture2D" uid="uid://bc3k1525i1mme" path="res://Assets/textures/keyboard_1.png" id="1_rgyo3"]
+
+[resource]
+albedo_texture = ExtResource("1_rgyo3")
+metallic_specular = 0.0
+texture_filter = 2

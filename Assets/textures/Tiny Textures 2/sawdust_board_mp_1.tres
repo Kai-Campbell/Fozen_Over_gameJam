@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://y2e30nxlkyho"]
+
+[ext_resource type="Texture2D" uid="uid://bd3bnpkhrmwbq" path="res://Assets/textures/Tiny Textures 2/sawdust_board_mp_1.png" id="1_myknc"]
+
+[resource]
+albedo_texture = ExtResource("1_myknc")
+metallic_specular = 0.0
+texture_filter = 2

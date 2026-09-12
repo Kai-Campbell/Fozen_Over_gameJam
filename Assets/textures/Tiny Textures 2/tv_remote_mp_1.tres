@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgcrwjfkxgv0d"]
+
+[ext_resource type="Texture2D" uid="uid://bc8m51h3iprb1" path="res://Assets/textures/Tiny Textures 2/tv_remote_mp_1.png" id="1_nihou"]
+
+[resource]
+albedo_texture = ExtResource("1_nihou")
+metallic_specular = 0.0
+texture_filter = 2

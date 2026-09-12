@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://citxr46rj4xqa"]
+
+[ext_resource type="Texture2D" uid="uid://clutrt0713wai" path="res://Assets/textures/Tiny Textures 2/walkie_talkie_2.png" id="1_uijx6"]
+
+[resource]
+albedo_texture = ExtResource("1_uijx6")
+metallic_specular = 0.0
+texture_filter = 2

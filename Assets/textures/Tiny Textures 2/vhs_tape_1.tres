@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vymtnxjglpv1"]
+
+[ext_resource type="Texture2D" uid="uid://cmv5f12j0hvie" path="res://Assets/textures/Tiny Textures 2/vhs_tape_1.png" id="1_3ausi"]
+
+[resource]
+albedo_texture = ExtResource("1_3ausi")
+metallic_specular = 0.0
+texture_filter = 2
