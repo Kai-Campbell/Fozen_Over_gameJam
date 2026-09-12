@@ -3,7 +3,8 @@ extends CharacterBody3D
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 
-var reg_music = load("res://Assets/Audio/Music/SnowisVeryCold.mp3")
+
+var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
 var bunk_music = load("res://Assets/Audio/Music/BunkTheme.mp3")
 var finale_music = load("res://Assets/Audio/Music/Finale.mp3")
 

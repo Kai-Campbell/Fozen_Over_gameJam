@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dwx4xq6g58fxs" path="res://Scripts/PlayerRayCast.gd" id="3_2sd6s"]
 [ext_resource type="Texture2D" uid="uid://bfxob7issqsod" path="res://Assets/Sprites/Crosshair.png" id="4_xwj3n"]
 [ext_resource type="AudioStream" uid="uid://by0env7cyo7bt" path="res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav" id="5_dxqho"]
-[ext_resource type="AudioStream" uid="uid://bs2277fw54k76" path="res://Assets/Audio/Music/SnowisVeryCold.mp3" id="6_8t00b"]
+[ext_resource type="AudioStream" uid="uid://ducuxk0gvqxwa" path="res://Assets/Audio/Music/Frozen OVer but better.mp3" id="6_8t00b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_htteu"]
 
@@ -15,32 +15,30 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 10
 
-[node name="MainGuy" type="Node3D" unique_id=1261746303]
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1469314718]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.017176, 0)
+[node name="MainGuy" type="CharacterBody3D" unique_id=1469314718]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_q1h8k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1650366081]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1650366081]
 shape = SubResource("CapsuleShape3D_htteu")
 
-[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=883234315]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=883234315]
 transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
 texture_filter = 0
 texture = ExtResource("2_2sd6s")
 
-[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=482060281]
+[node name="Head" type="Node3D" parent="." unique_id=482060281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62131196, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=895532561]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=895532561]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.37195754)
 
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Head" unique_id=2071871458 groups=["Player"]]
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=2071871458 groups=["Player"]]
 transform = Transform3D(1.9, 0, 0, 0, -8.305164e-08, -1.9, 0, 1.9, -8.305164e-08, 0, 0, -0.42578298)
 collision_mask = 2
 script = ExtResource("3_2sd6s")
 
-[node name="UI" type="Control" parent="CharacterBody3D" unique_id=1726949704]
+[node name="UI" type="Control" parent="." unique_id=1726949704]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Prompt" type="Label" parent="CharacterBody3D/UI" unique_id=79182764]
+[node name="Prompt" type="Label" parent="UI" unique_id=79182764]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -65,7 +63,7 @@ label_settings = SubResource("LabelSettings_2sd6s")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureRect" type="TextureRect" parent="CharacterBody3D/UI" unique_id=1474951552]
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1474951552]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,12 +79,14 @@ grow_vertical = 2
 texture = ExtResource("4_xwj3n")
 stretch_mode = 3
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=228509979]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=228509979]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.7195045, 0)
 stream = ExtResource("5_dxqho")
 volume_db = -40.0
 
-[node name="BackgroundMursic" type="AudioStreamPlayer3D" parent="CharacterBody3D" unique_id=228717811]
+[node name="BackgroundMursic" type="AudioStreamPlayer3D" parent="." unique_id=228717811]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.008588, 0)
 stream = ExtResource("6_8t00b")
 volume_db = -20.0
+
+[node name="MainGuy" type="Node3D" parent="." unique_id=1261746303]

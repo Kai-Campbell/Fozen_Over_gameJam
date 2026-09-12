@@ -30,6 +30,13 @@ else:
 		Bobby: No way! Once you leave I'm hiding the hatch again. No way you can't stay here.
 	- What should I do?
 		Bobby: You got to find some way to get out of it. I don't know how but the pilot isn't gonna take you back once you're gone.
+	if Global.has_gun:
+		- I'm not going to die because you won't help me! I'm taking this place by force! (Use Gun)
+			Bobby: Wait! [wave]NOOOOOOOOO!!!![/wave] 
+			#TODO set global to something let game end
+			do Global.text_end.emit()
+			=> END!
+		- Agree to Leave Bunker
 	Bobby: Listen, if you want to get out of it, you got to find some way to convince the pilot once you're at the North Pole.
 	Bobby: You can't bail now or everyone's gonna turn on you.
 	Bobby: There might be some way to force the pilot to let you go, if you catch my drift...

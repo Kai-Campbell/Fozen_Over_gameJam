@@ -10,9 +10,10 @@ if Global.has_met_gun_guy:
 		- I found you're gun. Here (give gun)
 			John: No way! You're a real hero!
 			John: I'll never forget this!
+			set Global.has_gun = false
 		- No I can't find it (keep the gun)
-			John: Alright I guess it's time to confess to Sergeant
-			John: Thanks for trying I guess.
+			John: Alright I guess it's time to confess to the Sergeant
+			John: Thanks for trying I guess...
 else:
 	if not Global.has_gun:
 		John: Hey, thank god you're here! I lost something important and the old man's gonna chew me out for it!
