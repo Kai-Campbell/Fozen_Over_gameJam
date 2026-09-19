@@ -36,10 +36,11 @@ func _process(_delta: float) -> void:
 	if Global.leave_shooted_pilot == true:
 		await fade_to_black_metallica.fade(1.0, 1.5).finished
 		#get_tree().change_scene_to_file("res://Scenes/10Sec.tscn")
+		#create a scene for this sceneraio where u fought the pilot and hes dead now
 	
 	if Global.decision_made_10_sec == true:
 		await fade_to_black_metallica.fade(1.0, 1.5).finished
-		get_tree().change_scene_to_file("res://Scenes/10Sec.tscn") # change this to a cutscene
+		get_tree().change_scene_to_file("res://Scenes/10Sec.tscn")
 
 	if Global.decision_made_20_min == true:
 		await fade_to_black_metallica.fade(1.0, 1.5).finished

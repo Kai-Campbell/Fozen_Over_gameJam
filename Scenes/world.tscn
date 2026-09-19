@@ -3659,7 +3659,7 @@ albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_im3sq"]
 transparency = 1
-albedo_color = Color(1, 1, 1, 0.30980393)
+albedo_color = Color(1, 1, 1, 0.3019608)
 
 [sub_resource type="SphereMesh" id="SphereMesh_5ivla"]
 material = SubResource("StandardMaterial3D_im3sq")
@@ -3667,6 +3667,10 @@ radius = 53.055
 height = 73.262
 radial_segments = 5
 rings = 5
+
+[sub_resource type="Gradient" id="Gradient_5ivla"]
+offsets = PackedFloat32Array(0, 0.49261084, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="Gradient" id="Gradient_5yf44"]
 offsets = PackedFloat32Array(0, 0.34666666, 0.6755555, 1)
@@ -7021,7 +7025,7 @@ emission_shape = 3
 emission_box_extents = Vector3(223.485, 26.325, 1)
 direction = Vector3(0, 0, 0)
 gravity = Vector3(0.1, 0, 0.1)
-color_ramp = SubResource("Gradient_5yf44")
+color_ramp = SubResource("Gradient_5ivla")
 
 [node name="CPUParticles3D2" type="CPUParticles3D" parent="Fog" unique_id=1789754916]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -185.8127, 17.59994, -131.33064)

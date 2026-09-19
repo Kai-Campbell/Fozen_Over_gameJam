@@ -15,7 +15,7 @@ func _ready() -> void:
 	Global.start_game.connect(move_door)
 
 func _process(_delta: float) -> void:
-	if Global.has_prop == true:  # probably unnecssary, remove after game jam
+	if Global.has_prop == true:  # probably unnecssary, remove after game jam EDIT 9/19/26 this is still here lol
 		kid.visible = false
 		kid_no_hat.visible = true
 	
@@ -23,6 +23,10 @@ func _process(_delta: float) -> void:
 	if Global.leave == true:
 		await fade_to_black_metallica.fade(1.0, 2.0).finished
 		get_tree().change_scene_to_file("res://Scenes/Finale.tscn")
+	
+	if Global.kill_bunker_guy == true:
+		await fade_to_black_metallica.fade(1.0, 2.0).finished
+		get_tree().change_scene_to_file("res://Scenes/kill_bunker_guy.tscn")
 
 func move_door():
 	animation_player.play("move_door")

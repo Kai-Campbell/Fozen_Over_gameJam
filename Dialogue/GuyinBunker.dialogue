@@ -33,7 +33,7 @@ else:
 	if Global.has_gun:
 		- I'm not going to die because you won't help me! I'm taking this place by force! (Use Gun)
 			Bobby: Wait! [wave]NOOOOOOOOO!!!![/wave] 
-			#TODO set global to something let game end
+			set Global.kill_bunker_guy = true
 			do Global.text_end.emit()
 			=> END!
 		- Agree to Leave Bunker

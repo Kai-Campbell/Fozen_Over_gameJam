@@ -20,10 +20,11 @@ var has_met_gun_guy = false
 var decision_made_10_sec = false # if you blow the bomb up
 var decision_made_20_min = false
 var leave_pilot_to_die = false # if you leave the pilot
-var leave_shooted_pilot = false
+var kill_bunker_guy = false
+var battle_with_pilot = false # if you fight the pilot
 var leave = false
 var kill_pilot = false
-var shoot_pilot = false
+var shoot_pilot = false # if you fight the pilot
 
 'interactables'
 signal item_aquired(item : String)
