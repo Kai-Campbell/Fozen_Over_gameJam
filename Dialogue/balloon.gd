@@ -82,12 +82,30 @@ func _ready() -> void:
 
 	mutation_cooldown.timeout.connect(_on_mutation_cooldown_timeout)
 	add_child(mutation_cooldown)
+	
+	dialogue_label.started_typing.connect(start_sound)
+	dialogue_label.finished_typing.connect(stop_sound)
+	dialogue_label.skipped_typing.connect(stop_sound)
 
 	if auto_start:
 		if not is_instance_valid(dialogue_resource):
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
 
+
+func start_sound():
+	if audio_stream_player.playing:
+		return
+	if dialogue_label._is_awaiting_mutation or dialogue_label._should_auto_pause:
+		stop_sound()
+	
+	audio_stream_player.play()
+
+func stop_sound():
+	if !audio_stream_player.playing:
+		return
+	
+	audio_stream_player.stop()
 
 func _process(_delta: float) -> void:
 	if is_instance_valid(dialogue_line):

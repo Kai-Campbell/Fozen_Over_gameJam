@@ -2,6 +2,9 @@ class_name DialogueManagerExampleBalloon extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
 
+#add the typing sound effect stuff, connect to the dialogue's signals
+#dialogue label is onready on line 69. has signals, started_typing, skipped_typing, finished_typing
+
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
 
@@ -70,6 +73,9 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+## audio streamer for playing sound when a person is speaking
+@onready var speaking_sound: AudioStreamPlayer = $SpeakingSound
+
 
 func _ready() -> void:
 	balloon.hide()
@@ -86,6 +92,7 @@ func _ready() -> void:
 		if not is_instance_valid(dialogue_resource):
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
+
 
 
 func _process(delta: float) -> void:

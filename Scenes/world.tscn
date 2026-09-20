@@ -105,6 +105,7 @@
 [ext_resource type="Resource" uid="uid://cnn1qs8wfye2q" path="res://Dialogue/ArmyGuyLookingForGun.dialogue" id="84_h46qv"]
 [ext_resource type="Texture2D" uid="uid://cxg2ikfrlhcyx" path="res://Assets/Sprites/Fisher.png" id="84_s2285"]
 [ext_resource type="Resource" uid="uid://c3m435fpvw7no" path="res://Dialogue/Fisher.dialogue" id="85_quixx"]
+[ext_resource type="AudioStream" uid="uid://kb65vshyl0jx" path="res://Assets/Audio/SFX/wind.wav" id="106_5ivla"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_im3sq"]
 _surfaces = [{
@@ -6726,7 +6727,7 @@ frame_progress = 0.720448
 
 [node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire" unique_id=1997016528]
 stream = ExtResource("53_gwaj6")
-volume_db = -15.0
+volume_db = -3.0
 autoplay = true
 max_distance = 50.0
 
@@ -6803,7 +6804,7 @@ frame_progress = 0.092328265
 
 [node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire4" unique_id=407225147]
 stream = ExtResource("53_gwaj6")
-volume_db = -15.0
+volume_db = -9.0
 autoplay = true
 max_distance = 15.0
 
@@ -6866,7 +6867,7 @@ frame_progress = 0.0048488504
 
 [node name="fire1" type="AudioStreamPlayer3D" parent="Fires/Fire7" unique_id=1412839182]
 stream = ExtResource("53_gwaj6")
-volume_db = -15.0
+volume_db = -9.0
 autoplay = true
 max_distance = 30.0
 
@@ -7006,7 +7007,7 @@ light_energy = 16.0
 spot_range = 23.584476
 spot_angle = 57.964172
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=965826620]
+[node name="Collision for hole" type="CSGCylinder3D" parent="." unique_id=965826620]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.91785, 3.7636561, -43.05576)
 use_collision = true
 radius = 3.1855469
@@ -7050,6 +7051,11 @@ emission_box_extents = Vector3(91.71, 26.325, 1)
 direction = Vector3(0, 0, 0)
 gravity = Vector3(0.1, 0, 0.1)
 color_ramp = SubResource("Gradient_5yf44")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Fog" unique_id=1142276667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -144.53174)
+stream = ExtResource("106_5ivla")
+autoplay = true
 
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]
 [connection signal="interacted" from="Bunker Stuff/secret door" to="." method="_on_secret_door_interacted"]

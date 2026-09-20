@@ -33,7 +33,7 @@ func _process(_delta: float) -> void:
 		shotpilotdeadlol.set_collision_layer_value(2, true)
 		shotpilotdeadlol.set_collision_mask_value(2, true)
 	
-	if Global.leave_shooted_pilot == true:
+	if Global.battle_with_pilot == true:
 		await fade_to_black_metallica.fade(1.0, 1.5).finished
 		#get_tree().change_scene_to_file("res://Scenes/10Sec.tscn")
 		#create a scene for this sceneraio where u fought the pilot and hes dead now

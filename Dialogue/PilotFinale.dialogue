@@ -4,7 +4,7 @@ Pilot: Welp, here we are.[wait=1]
 Pilot: Listen bud, I know you're probably scared, but what you're doing is really important
 Pilot: You're a real hero willing to sacrifice yourself for the benefit of mankind.
 Pilot: First thing I'm gonna do once this is all over is celebrate on the beach in your honor!
-- Can you please tell me why I'm here, no one actually explained why.
+- Can you please tell me why I'm here,\n no one actually explained why.
 	Pilot: Yeah [wait=1] you're the one whose gonna blow up the nuke.
 - Why exactly did you bring me out here?
 	Pilot: to blow up the nuke, duh.
