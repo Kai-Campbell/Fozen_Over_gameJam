@@ -3344,6 +3344,7 @@ sky = SubResource("Sky_al5m0")
 reflected_light_source = 2
 glow_enabled = true
 fog_enabled = true
+fog_light_energy = 0.2
 fog_sky_affect = 0.5
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
@@ -3542,6 +3543,8 @@ curve = SubResource("Curve_36g3o")
 emission_shape_offset = Vector3(160.56, 30.615, 133.365)
 emission_shape = 3
 emission_box_extents = Vector3(165.81, 1, 98.215)
+radial_accel_min = -3.0000021
+radial_accel_max = 2.9999976
 scale_curve = SubResource("CurveTexture_vhf2b")
 collision_mode = 2
 
@@ -6929,6 +6932,7 @@ font_size = 107
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -132.11409, 5.2274933, -113.197754)
 amount = 400
 lifetime = 5.0
+randomness = 0.4
 visibility_aabb = AABB(-4, -4, -4, 325.825, 36.04, 235.055)
 process_material = SubResource("ParticleProcessMaterial_36g3o")
 draw_pass_1 = SubResource("SphereMesh_cvubk")
@@ -6994,10 +6998,10 @@ stream = ExtResource("65_l4vrt")
 volume_db = -2.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Bunker Stuff" unique_id=368455593]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -112.06878, -30.88462, -4.3610477)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -113.557205, -30.88462, -8.920426)
 light_color = Color(1, 1, 0.5372549, 1)
 light_energy = 16.0
-spot_range = 20.33604
+spot_range = 19.541283
 spot_angle = 57.964172
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Bunker Stuff" unique_id=689200916]
@@ -7059,5 +7063,5 @@ autoplay = true
 
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]
 [connection signal="interacted" from="Bunker Stuff/secret door" to="." method="_on_secret_door_interacted"]
-[connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_leave_interacted"]
 [connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_static_body_3d_interacted"]
+[connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_leave_interacted"]
