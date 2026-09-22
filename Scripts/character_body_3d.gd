@@ -3,7 +3,15 @@ extends CharacterBody3D
 @onready var camera_3d: Camera3D = $Head/Camera3D
 @onready var head: Node3D = $Head
 @onready var label: Label = $UI/Label
+@onready var background_mursic: AudioStreamPlayer = $UI/BackgroundMursic
+@onready var walkingsounds: AudioStreamPlayer = $UI/walkingsounds
+@onready var foot_cast: RayCast3D = $Feet/FootCast
 
+
+var default_walk_sound = [load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav"), load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 2).wav")]
+var walkway_sound
+var carpet_sound
+var stone_sound
 
 var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
 var bunk_music = load("res://Assets/Audio/Music/BunkTheme.mp3")
@@ -11,7 +19,8 @@ var finale_music = load("res://Assets/Audio/Music/Finale.mp3")
 
 const SPEED = 9.0
 const RUN = 20.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 9.0
+const GRAVITY_MULTIPLIER = 1.8
 
 var look_direction: Vector2
 var camera_sens = 0.005
@@ -24,7 +33,7 @@ func _ready() -> void:
 	Global.text_start.connect(stop)
 	Global.text_end.connect(move_again)
 	Global.item_aquired.connect(display_item)
-	$BackgroundMursic.play()
+	background_mursic.play()
 
 func _input(event: InputEvent) -> void:
 	if can_move:
@@ -34,10 +43,16 @@ func _input(event: InputEvent) -> void:
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
 
+func _process(delta: float) -> void:
+	if foot_cast.is_colliding() and is_on_floor():
+		var floor = foot_cast.get_collider()
+		print(floor.name)
+
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += (get_gravity() * delta) * GRAVITY_MULTIPLIER
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor() and can_move:
@@ -56,19 +71,19 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction.x * current_speed
 			velocity.z = direction.z * current_speed
 		else:
-			$AudioStreamPlayer3D.play()
+			walkingsounds.play()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 	else:
-		$AudioStreamPlayer3D.stop()
+		walkingsounds.stop()
 		velocity.x = 0
 		velocity.z = 0
 
 	move_and_slide()
 
 func change_music(song):
-	$BackgroundMursic.stream = song
-	$BackgroundMursic.play()
+	background_mursic.stream = song
+	background_mursic.play()
 
 
 'these functions control whether the player can move when text starts'

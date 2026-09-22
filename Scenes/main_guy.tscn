@@ -22,9 +22,11 @@ script = ExtResource("1_q1h8k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1650366081]
 shape = SubResource("CapsuleShape3D_htteu")
+debug_color = Color(0.95773333, 0, 0.5335987, 0.41960785)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=883234315]
 transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
+visible = false
 texture_filter = 0
 texture = ExtResource("2_2sd6s")
 
@@ -99,14 +101,17 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=228509979]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.7195045, 0)
-stream = ExtResource("5_dxqho")
-volume_db = -40.0
-
-[node name="BackgroundMursic" type="AudioStreamPlayer3D" parent="." unique_id=228717811]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.008588, 0)
+[node name="BackgroundMursic" type="AudioStreamPlayer" parent="UI" unique_id=583145299]
 stream = ExtResource("6_8t00b")
 volume_db = -20.0
 
-[node name="MainGuy" type="Node3D" parent="." unique_id=1261746303]
+[node name="walkingsounds" type="AudioStreamPlayer" parent="UI" unique_id=511399392]
+stream = ExtResource("5_dxqho")
+volume_db = -30.0
+
+[node name="Feet" type="Node3D" parent="." unique_id=1276355212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.91540647, 0)
+
+[node name="FootCast" type="RayCast3D" parent="Feet" unique_id=1545738025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07128978, 0)
+target_position = Vector3(0, -0.225, 0)

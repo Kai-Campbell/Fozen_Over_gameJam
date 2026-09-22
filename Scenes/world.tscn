@@ -7063,5 +7063,5 @@ autoplay = true
 
 [connection signal="child_entered_tree" from="Items/Light/StaticBody3D" to="Items/Light/StaticBody3D" method="_on_child_entered_tree"]
 [connection signal="interacted" from="Bunker Stuff/secret door" to="." method="_on_secret_door_interacted"]
-[connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_static_body_3d_interacted"]
 [connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_leave_interacted"]
+[connection signal="interacted" from="Bunker Stuff/Leave" to="." method="_on_static_body_3d_interacted"]

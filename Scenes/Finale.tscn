@@ -523,13 +523,13 @@ shape = SubResource("BoxShape3D_vxaqe")
 debug_color = Color(0.957174, 1.4439225e-06, 0.53659636, 0.41960785)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Bomb" unique_id=371473120]
-transform = Transform3D(0.25608194, 0, 0, 0, -1.1193697e-08, 0.25608194, 0, -0.25608194, -1.1193697e-08, -0.42088795, 1.9652202, -0.21964711)
+transform = Transform3D(0.25608194, 0, 0, 0, -1.1193697e-08, 0.25608194, 0, -0.25608194, -1.1193697e-08, -0.7996979, 1.8646495, -0.21964723)
 shadow_enabled = true
-spot_range = 6.674528
+spot_range = 12.403032
 spot_angle = 66.74597
 
 [node name="Plane" type="StaticBody3D" parent="." unique_id=146189644 groups=["Talk"]]
-transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 43.404327)
+transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 40.771477)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("12_uecdt")
@@ -541,7 +541,7 @@ shape = SubResource("BoxShape3D_fn60o")
 debug_color = Color(0.9429945, 7.893444e-06, 0.60586435, 0.41960785)
 
 [node name="shotpilotdeadlol" type="StaticBody3D" parent="." unique_id=2074510805 groups=["Talk"]]
-transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 43.404327)
+transform = Transform3D(20.01, 0, 0, 0, 20.01, 0, 0, 0, 20.01, -7.842045, 0, 40.7497)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("12_uecdt")
