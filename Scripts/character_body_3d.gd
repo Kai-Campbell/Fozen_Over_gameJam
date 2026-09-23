@@ -43,10 +43,10 @@ func _input(event: InputEvent) -> void:
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if foot_cast.is_colliding() and is_on_floor():
-		var floor = foot_cast.get_collider()
-		print(floor.name)
+		var ground = foot_cast.get_collider()
+		print(ground.name)
 
 
 func _physics_process(delta: float) -> void:
