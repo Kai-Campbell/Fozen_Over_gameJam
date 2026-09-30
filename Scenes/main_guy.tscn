@@ -103,11 +103,15 @@ vertical_alignment = 1
 
 [node name="BackgroundMursic" type="AudioStreamPlayer" parent="UI" unique_id=583145299]
 stream = ExtResource("6_8t00b")
-volume_db = -20.0
+volume_db = -13.0
 
 [node name="walkingsounds" type="AudioStreamPlayer" parent="UI" unique_id=511399392]
 stream = ExtResource("5_dxqho")
-volume_db = -30.0
+volume_db = -25.0
+
+[node name="walktimer" type="Timer" parent="UI" unique_id=1877414137]
+wait_time = 0.6
+one_shot = true
 
 [node name="Feet" type="Node3D" parent="." unique_id=1276355212]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.91540647, 0)

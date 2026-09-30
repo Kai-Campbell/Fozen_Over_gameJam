@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/wood_sound.mp3-db190f851d9d0a043424d6df84bcbe
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0.0
 bpm=0.0
 beat_count=0

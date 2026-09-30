@@ -6,6 +6,7 @@ extends CharacterBody3D
 @onready var background_mursic: AudioStreamPlayer = $UI/BackgroundMursic
 @onready var walkingsounds: AudioStreamPlayer = $UI/walkingsounds
 @onready var foot_cast: RayCast3D = $Feet/FootCast
+@onready var walktimer: Timer = $UI/walktimer
 
 
 var default_walk_sound = load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav")
@@ -14,7 +15,7 @@ var carpet_sound = load("res://Assets/Audio/SFX/carpet_sound.mp3")
 var stone_sound = load("res://Assets/Audio/SFX/stone_sound.mp3")
 var metal_sound = load("res://Assets/Audio/SFX/metal_sound.mp3")
 var wood_sound = load("res://Assets/Audio/SFX/wood_sound.mp3")
-
+var current_sound
 
 var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
 var bunk_music = load("res://Assets/Audio/Music/BunkTheme.mp3")
@@ -24,10 +25,11 @@ const SPEED = 9.0
 const RUN = 20.0
 const JUMP_VELOCITY = 9.0
 const GRAVITY_MULTIPLIER = 1.8
+const WALK_TIMER_RUN = 0.3
+const WALK_TIMER_WALK = 0.6
 
 var look_direction: Vector2
 var camera_sens = 0.005
-var is_sprinting = false
 var current_speed = SPEED
 var can_move : bool = true
 
@@ -46,7 +48,6 @@ func _input(event: InputEvent) -> void:
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
 #this whole thing just doesnt work, so until then its going in a comment
-'''
 func _process(_delta: float) -> void:
 	if foot_cast.is_colliding() and is_on_floor():
 		var ground = foot_cast.get_collider().name
@@ -74,7 +75,7 @@ func _process(_delta: float) -> void:
 			change_walking_sound(wood_sound)
 		else:
 			change_walking_sound(default_walk_sound)
-'''
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -88,8 +89,19 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
-	is_sprinting = Input.is_action_pressed("run")
-	current_speed = RUN if is_sprinting else SPEED
+	if Input.is_action_pressed("run"):
+		current_speed = RUN
+		if !walktimer.timeout || walktimer.wait_time == WALK_TIMER_RUN:
+			pass
+		else:
+			walktimer.wait_time = WALK_TIMER_RUN
+	else:
+		current_speed = SPEED
+		if !walktimer.timeout || walktimer.wait_time == WALK_TIMER_WALK:
+			pass
+		else:
+			walktimer.wait_time = WALK_TIMER_WALK
+	
 	
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -100,12 +112,15 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
-			walkingsounds.play()
 	else:
-		walkingsounds.stop()
 		velocity.x = 0
 		velocity.z = 0
 	
+	# im going to be honest I hate that this works, but it does. Next time think ahead when doing the walking sounds
+	if velocity.length() != 0 and is_on_floor():
+		if walktimer.time_left <= 0.0:
+			walkingsounds.play()
+			walktimer.start()
 	
 	move_and_slide()
 
@@ -113,13 +128,14 @@ func change_music(song):
 	background_mursic.stream = song
 	background_mursic.play()
 
-'''
+
 func change_walking_sound(stream):
-	if walkingsounds.playing:
-		await get_tree().create_timer(1).timeout
-		
+	if current_sound == stream:
+		return
+	walkingsounds.stop()
 	walkingsounds.stream = stream
-'''
+	current_sound = stream
+
 
 'these functions control whether the player can move when text starts'
 func stop():

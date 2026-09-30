@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqwg23muhrj5v"]
 
 [ext_resource type="Script" uid="uid://c7rd2ubc2snks" path="res://Scripts/main_menu.gd" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://ck55rkfh1d04l" path="res://Assets/Screenshot 2026-02-24 141845.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://dse8k5vudov8l" path="res://Assets/Screenshot 2026-09-30 005402.png" id="2_ce3w2"]
 [ext_resource type="FontFile" uid="uid://uk64bdgbqgeb" path="res://Assets/Fonts/Achtung Bravo.ttf" id="3_1ehe0"]
 [ext_resource type="AudioStream" uid="uid://brwysa2oja7vh" path="res://Assets/Audio/Music/FireIntro.mp3" id="4_ce3w2"]
 
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_48xlc")
+texture = ExtResource("2_ce3w2")
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1674102596]
 layout_mode = 1

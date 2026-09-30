@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/carpet_sound.mp3-4eebe6b88943922e74f56ff815af
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0.0
 bpm=0.0
 beat_count=0
