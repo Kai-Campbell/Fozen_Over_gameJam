@@ -7,12 +7,20 @@ extends Node3D
 @onready var main_guy: Node3D = $CharacterBody3D
 @onready var bunk_pos: Node3D = $"Bunker Stuff/Bunk POS"
 @onready var leave_pos: Node3D = $"Bunker Stuff/Leave POS"
+@onready var world: FuncGodotMap = $World
 
 func _ready() -> void:
 	fade_to_black_metallica.fade(1.0, 0.0)
 	fade_to_black_metallica.fade(0.0, 3.0)
 	#this signal emits after talking to the mayor so the door opens
 	Global.start_game.connect(move_door)
+	
+	# Gets all of the func godots entity's names and puts them in the current worlds floors
+	if Global.current_world_floors.size() > 0:
+		Global.current_world_floors.clear()
+	for i in world.get_children():
+		Global.current_world_floors.append(i.name)
+	
 
 func _process(_delta: float) -> void:
 	if Global.has_prop == true:  # probably unnecssary, remove after game jam EDIT 9/19/26 this is still here lol

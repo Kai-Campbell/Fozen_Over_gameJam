@@ -8,10 +8,13 @@ extends CharacterBody3D
 @onready var foot_cast: RayCast3D = $Feet/FootCast
 
 
-var default_walk_sound = [load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav"), load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 2).wav")]
-var walkway_sound
-var carpet_sound
-var stone_sound
+var default_walk_sound = load("res://Assets/Audio/SFX/JDSherbert - Footstep Foley SFX Pack - Footstep (Snow - 1).wav")
+var walkway_sound = load("res://Assets/Audio/SFX/walkway_sound.mp3")
+var carpet_sound = load("res://Assets/Audio/SFX/carpet_sound.mp3")
+var stone_sound = load("res://Assets/Audio/SFX/stone_sound.mp3")
+var metal_sound = load("res://Assets/Audio/SFX/metal_sound.mp3")
+var wood_sound = load("res://Assets/Audio/SFX/wood_sound.mp3")
+
 
 var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
 var bunk_music = load("res://Assets/Audio/Music/BunkTheme.mp3")
@@ -42,12 +45,36 @@ func _input(event: InputEvent) -> void:
 			head.rotate_x(-event.relative.y * camera_sens)
 			head.rotation.x = clamp(head.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
-
+#this whole thing just doesnt work, so until then its going in a comment
+'''
 func _process(_delta: float) -> void:
 	if foot_cast.is_colliding() and is_on_floor():
-		var ground = foot_cast.get_collider()
-		print(ground.name)
-
+		var ground = foot_cast.get_collider().name
+		
+		# I could use a match case here, but match cases dont work with dynamic variables
+		# it has to be a constant value like a string, so I'm using an elif statement instead.
+		
+		if ground == Global.current_world_floors[0]:
+			#snow
+			change_walking_sound(default_walk_sound)
+		elif ground == Global.current_world_floors[1]:
+			#walkway
+			change_walking_sound(walkway_sound)
+		elif ground == Global.current_world_floors[2]:
+			#metal
+			change_walking_sound(metal_sound)
+		elif ground == Global.current_world_floors[3]:
+			#carpet
+			change_walking_sound(carpet_sound)
+		elif ground == Global.current_world_floors[4]:
+			#stone
+			change_walking_sound(stone_sound)
+		elif ground == Global.current_world_floors[5]:
+			#wood
+			change_walking_sound(wood_sound)
+		else:
+			change_walking_sound(default_walk_sound)
+'''
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -71,20 +98,28 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction.x * current_speed
 			velocity.z = direction.z * current_speed
 		else:
-			walkingsounds.play()
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
+			walkingsounds.play()
 	else:
 		walkingsounds.stop()
 		velocity.x = 0
 		velocity.z = 0
-
+	
+	
 	move_and_slide()
 
 func change_music(song):
 	background_mursic.stream = song
 	background_mursic.play()
 
+'''
+func change_walking_sound(stream):
+	if walkingsounds.playing:
+		await get_tree().create_timer(1).timeout
+		
+	walkingsounds.stream = stream
+'''
 
 'these functions control whether the player can move when text starts'
 func stop():

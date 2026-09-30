@@ -1,5 +1,8 @@
 extends Node
 
+'Floor names (for walking sounds)'
+var current_world_floors : PackedStringArray
+
 'Items'
 var has_flight_stick = false
 var has_light = false

@@ -7,6 +7,7 @@ extends Node
 @onready var pilot_with_gun: Sprite3D = $PilotWithGun
 @onready var main_guy: Node3D = $MainGuy
 @onready var shotpilotdeadlol: Interactable = $shotpilotdeadlol
+@onready var world: FuncGodotMap = $World
 
 
 func _ready() -> void:
@@ -15,6 +16,12 @@ func _ready() -> void:
 	Global.pilot_with_gun.connect(change_pilot_sprite)
 	Global.choose_time.connect(disable_talk)
 	main_guy.change_music(main_guy.finale_music)
+	
+		# Gets all of the func godots entity's names and puts them in the current worlds floors
+	if Global.current_world_floors.size() > 0:
+		Global.current_world_floors.clear()
+	for i in world.get_children():
+		Global.current_world_floors.append(i.name)
 
 func disable_talk():
 	$pilot/StaticBody3D.queue_free()
