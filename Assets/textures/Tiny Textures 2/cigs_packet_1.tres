@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://n6dc50w3cqe1"]
+
+[ext_resource type="Texture2D" uid="uid://dntk83vw3gf6p" path="res://Assets/textures/Tiny Textures 2/cigs_packet_1.png" id="1_irloj"]
+
+[resource]
+albedo_texture = ExtResource("1_irloj")
+metallic_specular = 0.0
+texture_filter = 2

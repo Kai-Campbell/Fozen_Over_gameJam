@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c5tsmk7nihs4h"]
+
+[ext_resource type="Texture2D" uid="uid://bf4ui47pfdoee" path="res://Assets/textures/Tiny Textures 2/button_12.png" id="1_tpjcs"]
+
+[resource]
+albedo_texture = ExtResource("1_tpjcs")
+metallic_specular = 0.0
+texture_filter = 2
