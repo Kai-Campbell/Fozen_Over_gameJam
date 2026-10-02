@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://kb65vshyl0jx" path="res://Assets/Audio/SFX/wind.wav" id="19_2uy30"]
 [ext_resource type="Resource" uid="uid://comkqg2klwix7" path="res://Dialogue/shot_pilot.dialogue" id="20_w6hvu"]
 [ext_resource type="Texture2D" uid="uid://7227iua34b8b" path="res://Assets/Sprites/PilotWithGun.png" id="20_yck00"]
+[ext_resource type="PackedScene" uid="uid://c3rn7kyfhi01c" path="res://Scenes/pause_menu.tscn" id="26_cblin"]
 
 [sub_resource type="Gradient" id="Gradient_ewnlq"]
 interpolation_mode = 2
@@ -890,3 +891,5 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.53908, 0, 28.723757)
 [node name="PlaneLight" type="MeshInstance3D" parent="." unique_id=844649540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1310616, 5.87109, 39.305405)
 mesh = SubResource("BoxMesh_1oi8b")
+
+[node name="PauseMenu" parent="." unique_id=426960790 instance=ExtResource("26_cblin")]

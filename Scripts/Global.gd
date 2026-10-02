@@ -30,14 +30,21 @@ var kill_pilot = false
 var shoot_pilot = false # if you fight the pilot
 
 'interactables'
+@warning_ignore("unused_signal")
 signal item_aquired(item : String)
 
 'pause game'
+@warning_ignore("unused_signal")
 signal text_start
+@warning_ignore("unused_signal")
 signal text_end
 
 'level specific'
+@warning_ignore("unused_signal")
 signal start_game
+@warning_ignore("unused_signal")
 signal pilot_with_gun
+@warning_ignore("unused_signal")
 signal choose_time
+@warning_ignore("unused_signal")
 signal pilot_dead_lol
