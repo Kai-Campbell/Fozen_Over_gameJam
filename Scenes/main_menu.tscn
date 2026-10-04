@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dse8k5vudov8l" path="res://Assets/Screenshot 2026-09-30 005402.png" id="2_ce3w2"]
 [ext_resource type="FontFile" uid="uid://uk64bdgbqgeb" path="res://Assets/Fonts/Achtung Bravo.ttf" id="3_1ehe0"]
 [ext_resource type="AudioStream" uid="uid://brwysa2oja7vh" path="res://Assets/Audio/Music/FireIntro.mp3" id="4_ce3w2"]
+[ext_resource type="PackedScene" uid="uid://mbf3na42ob07" path="res://Scenes/options.tscn" id="5_n45e2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ce3w2"]
 font_size = 120
@@ -40,18 +41,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.4708554, 0.4708554, 0.4708554, 0.36862746)
 
-[node name="Button" type="Button" parent="." unique_id=443005239]
-layout_mode = 0
-offset_left = 582.0
-offset_top = 414.0
-offset_right = 855.0
-offset_bottom = 523.0
-theme_override_constants/outline_size = 10
-theme_override_constants/line_spacing = 5
-theme_override_fonts/font = ExtResource("3_1ehe0")
-theme_override_font_sizes/font_size = 79
-text = "Play"
-
 [node name="Label" type="Label" parent="." unique_id=1824607168]
 layout_mode = 1
 anchors_preset = 5
@@ -67,7 +56,48 @@ text = "Frozen Over"
 label_settings = SubResource("LabelSettings_ce3w2")
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1994519631]
-stream = ExtResource("4_ce3w2")
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=767461055]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 403.0
+offset_right = 1225.0
+offset_bottom = 612.0
+theme_override_constants/separation = 15
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=443005239]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 79
+text = "Play"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1561988367]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 79
+text = "Settings"
+
+[node name="Options" parent="." unique_id=706695338 instance=ExtResource("5_n45e2")]
+visible = false
+
+[node name="return" type="Button" parent="Options" unique_id=981101866]
+offset_left = 529.0
+offset_top = 531.0
+offset_right = 759.0
+offset_bottom = 622.0
+theme_override_fonts/font = ExtResource("3_1ehe0")
+theme_override_font_sizes/font_size = 46
+text = "Return"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=456542965]
+stream = ExtResource("4_ce3w2")
+volume_db = -7.0
+autoplay = true
+bus = &"MUSIC"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Options/return" to="." method="_on_return_pressed"]

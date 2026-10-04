@@ -1,5 +1,9 @@
 extends Node
 
+'Options sliders values'
+var sfx_value = 0.7
+var music_value = 0.7
+
 'Floor names (for walking sounds)'
 var current_world_floors : PackedStringArray
 

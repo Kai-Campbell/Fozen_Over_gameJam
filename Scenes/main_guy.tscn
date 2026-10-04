@@ -103,11 +103,13 @@ vertical_alignment = 1
 
 [node name="BackgroundMursic" type="AudioStreamPlayer" parent="UI" unique_id=583145299]
 stream = ExtResource("6_8t00b")
-volume_db = -13.0
+volume_db = -7.0
+bus = &"MUSIC"
 
 [node name="walkingsounds" type="AudioStreamPlayer" parent="UI" unique_id=511399392]
 stream = ExtResource("5_dxqho")
-volume_db = -25.0
+volume_db = -15.0
+bus = &"SFX"
 
 [node name="walktimer" type="Timer" parent="UI" unique_id=1877414137]
 wait_time = 0.6

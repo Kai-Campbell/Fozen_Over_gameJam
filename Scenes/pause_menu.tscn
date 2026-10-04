@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3rn7kyfhi01c"]
 
 [ext_resource type="Script" uid="uid://dq0w2pdlhr2uo" path="res://Scripts/pause_menu.gd" id="1_emv3i"]
+[ext_resource type="PackedScene" uid="uid://mbf3na42ob07" path="res://Scenes/options.tscn" id="2_k0w1u"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=426960790]
 process_mode = 3
@@ -84,4 +85,86 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Paused"
 
+[node name="Options" parent="Control" unique_id=706695338 instance=ExtResource("2_k0w1u")]
+visible = false
+
+[node name="Button" type="Button" parent="Control/Options" unique_id=2074443110]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -178.0
+offset_right = 54.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "return"
+
+[node name="are you sure?" type="CanvasLayer" parent="." unique_id=499643524]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="are you sure?" unique_id=943620633]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.25
+offset_top = -208.5
+offset_right = 250.25
+offset_bottom = 208.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3425807, 0.34258068, 0.34258062, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="are you sure?" unique_id=47391004]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.58100003
+offset_left = -99.0
+offset_top = 25.0
+offset_right = 99.0
+offset_bottom = 6.6799927
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 58
+
+[node name="return" type="Button" parent="are you sure?/HBoxContainer" unique_id=584362250]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Return"
+
+[node name="yes" type="Button" parent="are you sure?/HBoxContainer" unique_id=2007211598]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Yes"
+
+[node name="Label" type="Label" parent="are you sure?" unique_id=1923341851]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -130.0
+offset_right = 200.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 61
+text = "Are you sure?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Control/Box/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Control/Box/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Box/VBoxContainer/Back to title" to="." method="_on_back_to_title_pressed"]
+[connection signal="pressed" from="Control/Options/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="are you sure?/HBoxContainer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="are you sure?/HBoxContainer/yes" to="." method="_on_yes_pressed"]

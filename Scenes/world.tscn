@@ -7928,6 +7928,7 @@ stream = ExtResource("53_gwaj6")
 volume_db = -3.0
 autoplay = true
 max_distance = 50.0
+bus = &"SFX"
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Fires/Fire" unique_id=802494595]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036755055, -0.108405516, -0.015367813)
@@ -8005,6 +8006,7 @@ stream = ExtResource("53_gwaj6")
 volume_db = -9.0
 autoplay = true
 max_distance = 15.0
+bus = &"SFX"
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Fires/Fire4" unique_id=1899002107]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, -0.014093876, -0.108405516, -0.015367985)
@@ -8068,6 +8070,7 @@ stream = ExtResource("53_gwaj6")
 volume_db = -9.0
 autoplay = true
 max_distance = 30.0
+bus = &"SFX"
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Fires/Fire7" unique_id=57414028]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.108615875, -0.108405516, 0.011467516)
@@ -8190,7 +8193,8 @@ material = ExtResource("3_5v1tr")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Bunker Stuff" unique_id=563722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -126.80692, 2.999999, -31.243711)
 stream = ExtResource("65_l4vrt")
-volume_db = -2.0
+volume_db = -5.0
+bus = &"SFX"
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Bunker Stuff" unique_id=368455593]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -113.557205, -30.88462, -8.920426)
@@ -8254,7 +8258,9 @@ color_ramp = SubResource("Gradient_5yf44")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Fog" unique_id=1142276667]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -144.53174)
 stream = ExtResource("106_5ivla")
+volume_db = -1.0
 autoplay = true
+bus = &"SFX"
 
 [node name="PauseMenu" parent="." unique_id=426960790 instance=ExtResource("111_fv0bq")]
 
