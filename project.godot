@@ -19,6 +19,10 @@ run/main_scene="uid://720lqr03qxpv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://cagvbkrjwq5et"
+
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"

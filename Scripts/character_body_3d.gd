@@ -15,6 +15,7 @@ var carpet_sound = load("res://Assets/Audio/SFX/carpet_sound.mp3")
 var stone_sound = load("res://Assets/Audio/SFX/stone_sound.mp3")
 var metal_sound = load("res://Assets/Audio/SFX/metal_sound.mp3")
 var wood_sound = load("res://Assets/Audio/SFX/wood_sound.mp3")
+var dirt_sound = load("res://Assets/Audio/SFX/dirt_sound_1.mp3")
 var current_sound
 
 var reg_music = load("res://Assets/Audio/Music/Frozen OVer but better.mp3")
@@ -73,6 +74,9 @@ func _process(_delta: float) -> void:
 		elif ground == Global.current_world_floors[5]:
 			#wood
 			change_walking_sound(wood_sound)
+		elif ground == Global.current_world_floors[7]:
+			#dirt
+			change_walking_sound(dirt_sound)
 		else:
 			change_walking_sound(default_walk_sound)
 
