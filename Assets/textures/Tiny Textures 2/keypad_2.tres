@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://l7jtibf800ka"]
+
+[ext_resource type="Texture2D" uid="uid://d0b27wwl8o0tp" path="res://Assets/textures/Tiny Textures 2/keypad_2.png" id="1_kc7nn"]
+[ext_resource type="Texture2D" uid="uid://o35a7m4fum4i" path="res://Assets/textures/Tiny Textures 2/keypad_2_emission.png" id="2_slhmg"]
+
+[resource]
+albedo_texture = ExtResource("1_kc7nn")
+metallic_specular = 0.0
+emission_enabled = true
+emission_texture = ExtResource("2_slhmg")
+texture_filter = 2

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://co0d8jefsfwri"]
+
+[ext_resource type="Texture2D" uid="uid://cik0ilun2jtuq" path="res://Assets/textures/wooden_crate_9.png" id="1_gges3"]
+
+[resource]
+albedo_texture = ExtResource("1_gges3")
+metallic_specular = 0.0
+texture_filter = 2

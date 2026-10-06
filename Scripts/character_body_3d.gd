@@ -71,10 +71,10 @@ func _process(_delta: float) -> void:
 		elif ground == Global.current_world_floors[4]:
 			#stone
 			change_walking_sound(stone_sound)
-		elif ground == Global.current_world_floors[5]:
+		elif ground == Global.current_world_floors[7]:
 			#wood
 			change_walking_sound(wood_sound)
-		elif ground == Global.current_world_floors[7]:
+		elif ground == Global.current_world_floors[6]:
 			#dirt
 			change_walking_sound(dirt_sound)
 		else:

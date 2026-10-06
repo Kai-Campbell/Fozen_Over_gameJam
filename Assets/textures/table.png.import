@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beo156vf6g45c"
-path.s3tc="res://.godot/imported/military_radio_2.png-a14a904904578a0f42121bd57b8c5121.s3tc.ctex"
+uid="uid://c47vt66fro7gf"
+path.s3tc="res://.godot/imported/table.png-69f2ff09aa43176b2f37537c5e4b7734.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/military_radio_2.png"
-dest_files=["res://.godot/imported/military_radio_2.png-a14a904904578a0f42121bd57b8c5121.s3tc.ctex"]
+source_file="res://Assets/textures/table.png"
+dest_files=["res://.godot/imported/table.png-69f2ff09aa43176b2f37537c5e4b7734.s3tc.ctex"]
 
 [params]
 
