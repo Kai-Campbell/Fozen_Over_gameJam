@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dlmvnp6raiepf"]
+
+[ext_resource type="Script" uid="uid://bbrpojk7w8o08" path="res://Scripts/shoot_pilot.gd" id="1_nfi7v"]
+[ext_resource type="PackedScene" uid="uid://n2giyhtwedwu" path="res://Scenes/fade_to_black_metallica.tscn" id="2_qq6uf"]
+[ext_resource type="AudioStream" uid="uid://bpwdcwjn2aadl" path="res://Assets/Audio/Music/kill pilot song.mp3" id="3_y0mxr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2udso"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrr0p"]
+font_size = 80
+
+[node name="ShootPilot" type="CanvasLayer" unique_id=1600877652]
+script = ExtResource("1_nfi7v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2093016581]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1208412496]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -568.5
+offset_top = 27.0
+offset_right = 568.5
+offset_bottom = 312.0
+grow_horizontal = 2
+text = "Left with no choice, you decide to save yourself and shoot the pilot. As he lay bleeding on the
+ground you get in the plane and take off. You fly as far as the plane will take you and land next 
+to a small body of land. You don't know exactly where you are, but that doesn't matter. You're
+alive and thats all that really matters now."
+label_settings = SubResource("LabelSettings_2udso")
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="." unique_id=194776215]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -55.0
+offset_right = 154.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The End"
+label_settings = SubResource("LabelSettings_lrr0p")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1658814770]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = -178.0
+offset_right = 254.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 199
+
+[node name="PlayAgain\'" type="Button" parent="HBoxContainer" unique_id=821348311]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="HBoxContainer" unique_id=1646454185]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="Fade To Black Metallica" parent="." unique_id=2014068824 instance=ExtResource("2_qq6uf")]
+
+[node name="Timer" type="Timer" parent="." unique_id=384949941]
+wait_time = 15.0
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1315160423]
+stream = ExtResource("3_y0mxr")
+autoplay = true
+
+[connection signal="pressed" from="HBoxContainer/PlayAgain\'" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

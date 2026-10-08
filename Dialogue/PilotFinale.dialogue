@@ -45,19 +45,35 @@ if Global.has_alien_device and Global.has_gun:
 			do Global.choose_time.emit()
 			=> END!
 	- Pull out gun and shoot Pilot
-		do Global.pilot_with_gun.emit()
+		do Global.play_gun_sound.emit()
 		Pilot: Hey not so fast!
 		You: Do you really think I'm stupid enough to believe in all this hero nonsense? I know what you guys were planning this whole time.
 		You: Not like it really matters. Once you're gone I'm taking the plane and flying far away from here.
 		Pilot: Listen. You can't just leave me here. I've got people waiting for me back at base. If this plane doesn't come back they'll look for you.
 		Pilot: I know my way back, you don't...
 		Pilot: Not like you'll get far. The worlds still frozen over, you're not gonna sit on some beach in a lawn chair soaking up the sun anyways.
-		Pilot: You know what? Let's do this, not like I can't go back to camp and get another idiot like [wave]you![/wave]
-		set Global.shoot_pilot = true
-		do Global.pilot_dead_lol.emit()
-		do Global.text_end.emit()
-		do Global.choose_time.emit()
-		=> END!
+		Pilot: ...
+		Pilot: What's the point? My time had to come at some point right? ...
+		Pilot: Go ahead. Just make it quick okay?
+		- Kill the pilot
+			set Global.shooted_pilot = true
+			do Global.text_end.emit()
+			=> END!
+		- Ask why
+			You: Let me ask you first.
+			You: Why exactly does it have to be this way huh? Why can't you just take me back after arming it huh?
+			Pilot: What do you mean?
+			You: I mean why do I have to arm the nuke and wait? Can't you just take me back?
+			Pilot: ...
+			Pilot: I don't know. I was just told to do that...
+			You: How about I just arm this thing and we go back?
+			Pilot: But the stakes! ... The plot! The twist!
+			You: [wave]WHAT THE HELL ARE YOU TALKING ABOUT JUST TAKE ME BACK GOOD GOD![/wave]
+			Pilot: Oh okay alright calm down man ...
+			You: Great, lets go.
+			set Global.strike_the_deal = true
+			do Global.text_end.emit()
+			=> END!
 	- I'm scared! I'm not ready to die.
 		do Global.pilot_with_gun.emit()
 		Pilot: Well, I can't take you back.
@@ -68,19 +84,35 @@ if Global.has_alien_device and Global.has_gun:
 		Pilot: Once you're here it's decided.
 elif Global.has_gun:
 	- Pull out gun and shoot Pilot
-		do Global.pilot_with_gun.emit()
+		do Global.play_gun_sound.emit()
 		Pilot: Hey not so fast!
 		You: Do you really think I'm stupid enough to believe in all this hero nonsense? I know what you guys were planning this whole time.
 		You: Not like it really matters. Once you're gone I'm taking the plane and flying far away from here.
 		Pilot: Listen. You can't just leave me here. I've got people waiting for me back at base. If this plane doesn't come back they'll look for you.
 		Pilot: I know my way back, you don't...
 		Pilot: Not like you'll get far. The worlds still frozen over, you're not gonna sit on some beach in a lawn chair soaking up the sun anyways.
-		Pilot: You know what? Let's do this, not like I can't go back to camp and get another idiot like [wave]you![/wave]
-		set Global.shoot_pilot = true
-		do Global.pilot_dead_lol.emit()
-		do Global.text_end.emit()
-		do Global.choose_time.emit()
-		=> END!
+		Pilot: ...
+		Pilot: What's the point? My time had to come at some point right? ...
+		Pilot: Go ahead. Just make it quick okay?
+		- Kill the pilot
+			set Global.shooted_pilot = true
+			do Global.text_end.emit()
+			=> END!
+		- Ask why
+			You: Let me ask you first.
+			You: Why exactly does it have to be this way huh? Why can't you just take me back after arming it huh?
+			Pilot: What do you mean?
+			You: I mean why do I have to arm the nuke and wait? Can't you just take me back?
+			Pilot: ...
+			Pilot: I don't know. I was just told to do that...
+			You: How about I just arm this thing and we go back?
+			Pilot: But the stakes! ... The plot! The twist!
+			You: [wave]WHAT THE HELL ARE YOU TALKING ABOUT JUST TAKE ME BACK GOOD GOD![/wave]
+			Pilot: Oh okay alright calm down man ...
+			You: Great, lets go.
+			set Global.strike_the_deal = true
+			do Global.text_end.emit()
+			=> END!
 	- I'm scared! I'm not ready to die.
 		do Global.pilot_with_gun.emit()
 		Pilot: Well, I can't take you back.
